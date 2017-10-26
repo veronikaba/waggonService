@@ -1,20 +1,22 @@
 <?php
-require_once("models/models.php");
+define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
+require_once(ABS_PATH . '/models/models.php');
 
 class Model {
 
-  public funktion getLogin() {
+  public function getlogin() {
 
     if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 
-      if($_REQUEST)['username']=='Team2' && $_REQUEST['password'] == 'passwort'{
+      if ( trim($_REQUEST['username']) == 'Team2' && trim($_REQUEST['password']) == 'passwort'){
         return 'login';
       }
 
       else {
-        return 'ungültige Eingabe'
+        return 'ungültige Eingabe';
       }
     }
-  }
+    }
 }
- ?>
+
+?>
