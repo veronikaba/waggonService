@@ -1,0 +1,65 @@
+body{
+    font-family: Calibri;
+}
+
+header{
+    text-align: right;
+    font-size: small;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+form{
+    background-color: lightgrey;
+    text-align: center;
+    margin-left: 620px;
+    margin-right: 620px;
+    border-radius: 10px;
+}
+
+input{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border: solid 1px grey;
+    padding: 6px;
+}
+
+button{
+    background-color: white;
+    border: solid 1px grey;
+    padding: 6px;
+}
+
+.logintext{
+    color: white;
+    font-size: xx-large;
+    padding-top: 10px;
+}
+
+.abstand{
+    padding-bottom: 10px;
+}
+
+.abstandButton{
+    margin-right:10px;
+}
+
+.abstandnachButton{
+    padding-bottom: 35px;
+}
+
+footer{
+    background-color: lightgrey;
+    text-align: center;
+    position: fixed;
+    bottom:0;
+    padding:10px;
+    left:0;
+    right:0;
+    font-size: small;
+
+}
