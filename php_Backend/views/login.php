@@ -1,12 +1,14 @@
 <html>
 <head>
     <title>Login</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
 
-        * {
-            box-sizing: border-box;
-            font-family: Calibri;
+        body {
+            font-family: Tahoma;
+            background-color: #ededed;
         }
 
         header{
@@ -23,7 +25,7 @@
             background-color: lightgrey;
             border-radius: 10px;
             width:300px;
-            height:300px;
+            height:280px;
             line-height:60px;
             color:white;
             margin:20px auto;
@@ -31,24 +33,8 @@
         }
 
         input{
-            border: solid 1px grey;
-            width: 180px;
-            height:35px;
-            padding: 5px;
-            border-radius: 2px;
-        }
-
-        button{
-            background-color: white;
-            border: solid 1px grey;
-            padding: 6px;
-            width: 80px;
-            border-radius: 2px;
-        }
-
-        button:hover{
-            background-color:darkgrey;
-            color: white;
+            margin: 0 auto;
+            margin-bottom: 20px;
         }
 
         footer{
@@ -61,43 +47,59 @@
             right:0;
             font-size: small;
         }
+        a {
+            color:#4f4e4e;
+        }
+        a:hover{
+            color:black;
+        }
+
+        @media only screen and (min-width: 500px) {
+
+            .logo {
+                width: 470px;
+                margin-left: 5px;
+                margin-bottom: 10px;
+                margin-top: 5%;
+            }
+        }
+
+        @media only screen and (max-width: 499px){
+
+            .logo{
+                width:60%;
+                margin-top:5%
+
+            }
+
+        }
 
     </style>
 
 </head>
-  <body>
-    <header>
-        <p>Sprache deutsch englisch</p>
-    </header>
-    <?php
-    echo $result;
-      ?>
+<body>
+<header>
+    <p>Sprache deutsch englisch</p>
+</header>
+<?php
+echo $result;
+?>
 
+<div class="col-12">
+    <img src="02_WSG_logo.png" alt="Logo" class="logo"">
+    <form action=" "  method="POST">
+        <p style="color:white; font-size: 35px; padding-top:10px; margin-bottom: 10px; "><b>LOGIN</b></p>
+        <input id="username" class="form-control" style="width:180px;" name="username"  placeholder="Kundennummer" type="text" required="required" />
+        <input id="password" class="form-control" style="width:180px;" name="password" placeholder="Passwort" type="password" required="required"  />
+        <button type="submit" class="btn btn-default" >Einloggen</button>
+        <button type="reset" class="btn btn-default">Abbrechen</button>
+    </form></div>
 
-    <div class="col-12">
-    <img src="02_WSG_logo.png" alt="Logo" style="width:30%; margin-top:5%;">
-        <form action=" " method="POST">
-          <p style="color:white; font-size: 35px; padding-top:10px; margin-bottom: 10px; "><b>LOGIN</b></p>
+<footer>
+    <a href="https://waggonservice.com/impressum.html" target="_blank">Impressum</a>
+    <a href="https://waggonservice.com/#contact" target="_blank">Kontakt</a>
+    <a href="https://waggonservice.com/" target="_blank">waggonservice.com</a>
+</footer>
 
-          <input id="username"  name="username"  placeholder="Kundennummer" type="text" required="required" />
-            </br>
-
-          <input id="password" name="password" placeholder="Passwort" type="password" required="required"  />
-            </br>
-            <div class="flex">
-          <button type="submit" style="margin-right:2px;"><span>Einloggen</span></button>
-          <button type="reset"><span>Abbrechen</span></button>
-            </div>
-      </form>
-    </div>
-
-
-  <footer>
-      <a href="https://waggonservice.com/impressum.html" target="_blank">Impressum</a>
-      <a href="https://waggonservice.com/#contact" target="_blank">Kontakt</a>
-      <a href="https://waggonservice.com/" target="_blank">waggonservice.com</a>
-  </footer>
-
-  </body>
-
+</body>
 </html>
