@@ -95,7 +95,7 @@
      <p>Sprache deutsch englisch</p>
  </header>
 
- <img src="02_WSG_logo.png" alt="Logo" class="logo"">
+ <img src="views/02_WSG_logo.png" alt="Logo" class="logo"">
  <p class="auftragstext">Auftragsübersicht</p>
 
 

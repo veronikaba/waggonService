@@ -86,7 +86,7 @@ echo $result;
 ?>
 
 <div class="col-12">
-    <img src="02_WSG_logo.png" alt="Logo" class="logo"">
+    <img src="views/02_WSG_logo.png" alt="Logo" class="logo"">
     <form action=" "  method="POST">
         <p style="color:white; font-size: 35px; padding-top:10px; margin-bottom: 10px; "><b>LOGIN</b></p>
         <input id="username" class="form-control" style="width:180px;" name="username"  placeholder="Kundennummer" type="text" required="required" />
