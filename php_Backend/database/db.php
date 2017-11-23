@@ -6,7 +6,7 @@
  * Time: 10:29
  */
 echo date("H:i:s");
-$db = new mysqli('localhost', 'root', 'Te17e4so', 'waggonservice');
+$db = new mysqli('localhost', 'root', '', 'waggonservice');
 if(mysqli_connect_errno($db)){
 echo "Failed to connect to MySQL:" . mysqli_connect_error();
 exit();
