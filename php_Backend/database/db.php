@@ -6,7 +6,11 @@
  * Time: 10:29
  */
 echo date("H:i:s");
-$db = new mysqli('localhost', 'root', '', 'waggonservice');
+$db = new mysqli('localhost', 'root', 'Te17e4so', 'waggonservice');
+if(mysqli_connect_errno($db)){
+echo "Failed to connect to MySQL:" . mysqli_connect_error();
+exit();
+}
 $ergDrei = $db->query("SELECT * FROM contact");
 print_r($ergDrei);
 
