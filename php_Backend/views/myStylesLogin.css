@@ -1,0 +1,75 @@
+body {
+    font-family: Tahoma;
+    background-color: #ededed;
+}
+
+header{
+    text-align: right;
+    font-size: small;
+}
+
+.col-12{
+    width: 100%;
+    text-align: center;
+}
+
+form{
+    background-color: lightgrey;
+    border-radius: 10px;
+    width:300px;
+    height:280px;
+    line-height:60px;
+    color:white;
+    margin:20px auto;
+    position:relative;
+}
+
+input{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width:180px
+}
+
+.logintext{
+    color:white;
+    font-size: 35px;
+    padding-top:10px;
+    margin-bottom: 10px;
+}
+
+footer{
+    background-color: lightgrey;
+    text-align: center;
+    position: fixed;
+    bottom:0;
+    padding:10px;
+    left:0;
+    right:0;
+    font-size: small;
+}
+a {
+    color:#4f4e4e;
+}
+a:hover{
+    color:black;
+}
+
+@media only screen and (min-width: 500px) {
+
+    .logo {
+        width: 470px;
+        margin-left: 5px;
+        margin-bottom: 10px;
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 499px){
+
+    .logo{
+        width:60%;
+        margin-top:5%
+
+    }
+
+}

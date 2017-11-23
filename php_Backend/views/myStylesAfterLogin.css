@@ -1,0 +1,116 @@
+body {
+    font-family: Tahoma;
+    background-color: #ededed;
+}
+
+
+
+header{
+    text-align: right;
+    font-size: small;
+    margin-right:5px;
+}
+
+.kunde{
+    float:right;
+    margin-right:5px;
+}
+
+.kundetext{
+    text-align: right;
+    margin-right:5px;
+}
+.abmelden{
+    text-align: right;
+    margin-right: 5px;
+}
+
+
+thead{
+    background-color:#d1cdca;
+}
+tbody{
+    background-color:white;
+}
+
+footer{
+    background-color: lightgrey;
+    text-align: center;
+    position: fixed;
+    bottom:0;
+    padding:10px;
+    left:0;
+    right:0;
+    font-size: small;
+}
+a {
+    color:#4f4e4e;
+}
+a:hover{
+    color:black;
+}
+
+.inner-addon {
+    position: relative;
+}
+
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+.right-addon .glyphicon { right: 0px;}
+
+.right-addon input { padding-right: 30px; }
+
+
+@media only screen and (min-width: 500px){
+
+
+    .logo{
+        width:470px;
+        margin-left:5px;
+        margin-bottom:10px;
+    }
+
+    .auftragstext{
+        background-color: #eb5f0a;
+        border-radius:1px;
+        font-size: 35px;
+        width:480px;
+        color:white;
+        text-align:center;
+        margin-bottom:30px;
+
+    }
+
+}
+
+@media only screen and (max-width: 499px){
+
+    .logo{
+        width:50%;
+        margin-left:1%;
+        margin-bottom:10px;
+    }
+
+    .auftragstext{
+        background-color: #eb5f0a;
+        border-radius:1px;
+        font-size: 20px;
+        width:250px;
+        color:white;
+        text-align:center;
+        margin-bottom:30px;
+
+    }
+
+    thead{
+        font-size: small;
+    }
+    tbody{
+        font-size: small;
+    }
+
+}
