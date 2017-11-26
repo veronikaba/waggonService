@@ -8,6 +8,27 @@ header{
     font-size: small;
 }
 
+html, body {
+    height: 100%;
+    margin:0px;
+}
+
+.content {
+    min-height: 100%;
+    margin: 0 auto -20px;
+}
+footer,
+.push {
+
+    height: 20px;
+}
+
+footer{
+    background-color:lightgrey;
+    text-align: center;
+    font-size: small;
+}
+
 .col-12{
     width: 100%;
     text-align: center;
@@ -37,16 +58,7 @@ input{
     margin-bottom: 10px;
 }
 
-footer{
-    background-color: lightgrey;
-    text-align: center;
-    position: fixed;
-    bottom:0;
-    padding:10px;
-    left:0;
-    right:0;
-    font-size: small;
-}
+
 a {
     color:#4f4e4e;
 }

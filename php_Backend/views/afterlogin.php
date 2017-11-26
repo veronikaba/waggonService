@@ -8,28 +8,25 @@
 
 </head>
  <body>
+ <div class="content">
  <header>
      <p>Sprache deutsch englisch</p>
  </header>
 
  <div class="kunde">
-
-     <p class="kundetext"><span class="glyphicon glyphicon-user"></span>  Name Kunde</p>
-     <p class="abmelden">Abmelden</p>
-     <div class="inner-addon right-addon">
-         <i class="glyphicon glyphicon-search"></i>
-         <input type="text" class="form-control" placeholder="Suche" />
-     </div>
-
+     <p class="textright"><span class="glyphicon glyphicon-user"></span>Name Kunde</p>
+     <p class="textright">Abmelden</p>
  </div>
-
-
 
  <img src="views/02_WSG_logo.png" alt="Logo" class="logo"">
  <p class="auftragstext">Auftragsübersicht</p>
 
+ <div class="inner-addon right-addon">
+     <i class="glyphicon glyphicon-search"></i>
+     <input type="text" class="form-control" placeholder="Suche" />
+ </div>
 
-
+ <div style="overflow-x:auto;">
     <table class="table  table-striped table-hover">
         <thead>
         <tr>
@@ -61,7 +58,9 @@
         </tbody>
 
     </table>
-
+ </div>
+     <div class="push"></div>
+ </div>
 
  <footer>
      <a href="https://waggonservice.com/impressum.html" target="_blank">Impressum</a>

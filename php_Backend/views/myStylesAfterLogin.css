@@ -3,55 +3,48 @@ body {
     background-color: #ededed;
 }
 
+html, body {
+    height: 100%;
+    margin:0px;
+}
 
+.content {
+    min-height: 100%;
+    margin: 0 auto -20px;
+}
+footer,
+.push {
+
+    height: 20px;
+}
+
+footer{
+    background-color:lightgrey;
+    text-align: center;
+    font-size: small;
+}
 
 header{
     text-align: right;
     font-size: small;
-    margin-right:5px;
 }
 
 .kunde{
     float:right;
+    margin-right:10px;
+}
+
+.glyphicon-user{
     margin-right:5px;
 }
 
-.kundetext{
+.textright{
     text-align: right;
-    margin-right:5px;
-}
-.abmelden{
-    text-align: right;
-    margin-right: 5px;
-}
-
-
-thead{
-    background-color:#d1cdca;
-}
-tbody{
-    background-color:white;
-}
-
-footer{
-    background-color: lightgrey;
-    text-align: center;
-    position: fixed;
-    bottom:0;
-    padding:10px;
-    left:0;
-    right:0;
-    font-size: small;
-}
-a {
-    color:#4f4e4e;
-}
-a:hover{
-    color:black;
 }
 
 .inner-addon {
     position: relative;
+    margin-bottom:10px;
 }
 
 .inner-addon .glyphicon {
@@ -60,13 +53,30 @@ a:hover{
     pointer-events: none;
 }
 
-.right-addon .glyphicon { right: 0px;}
+.right-addon .glyphicon {
+    right: 0px;
+}
 
-.right-addon input { padding-right: 30px; }
+thead{
+    background-color:#d1cdca;
+}
 
+tbody{
+    background-color:white;
+}
+
+a {
+    color:#4f4e4e;
+}
+a:hover{
+    color:black;
+}
 
 @media only screen and (min-width: 500px){
 
+    header{
+        margin-right:10px;
+    }
 
     .logo{
         width:470px;
@@ -81,10 +91,13 @@ a:hover{
         width:480px;
         color:white;
         text-align:center;
-        margin-bottom:30px;
-
     }
 
+    .inner-addon input{
+        width:480px;
+        margin-left:auto;
+        margin-right:0px;
+    }
 }
 
 @media only screen and (max-width: 499px){
@@ -99,18 +112,16 @@ a:hover{
         background-color: #eb5f0a;
         border-radius:1px;
         font-size: 20px;
-        width:250px;
+        width:200px;
         color:white;
         text-align:center;
-        margin-bottom:30px;
-
+        margin-bottom:10px;
     }
 
     thead{
-        font-size: small;
+        font-size: smaller;
     }
     tbody{
-        font-size: small;
+        font-size: smaller;
     }
-
 }

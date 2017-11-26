@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
 }
@@ -7,6 +6,30 @@ body {
     font-family: Tahoma;
     background-color: #ededed;
 }
+
+html, body {
+    height: 100%;
+    margin:0px;
+}
+
+.content {
+    min-height: 100%;
+    margin: 0 auto -20px;
+}
+footer,
+.push {
+    height: 20px;
+}
+
+footer{
+    background-color:lightgrey;
+    text-align: center;
+    font-size: small;
+}
+
+a {  color:#4f4e4e;  }
+
+a:hover{  color:black;  }
 
 header{
     text-align: right;
@@ -19,85 +42,47 @@ header{
     margin-right:5px;
 }
 
-.kundetext{
-    text-align: right;
-    margin-right:5px;
-}
-.abmelden{
-    text-align: right;
+.distanceTop{
+    text-align:right;
     margin-right: 5px;
 }
 
-.textheader{
-    background-color:#696867;
-    color:white;
+.rows::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .orange{
     background-color:#eb5f0a;
+    overflow: hidden;
+    color:white;
 }
 
-summary{
-    margin-right:10px;
-    padding-bottom:9px;
+.grey{
+    background-color:#696867;
+    overflow: hidden;
+    color:white;
 }
 
+.ansprechpartner{ text-align: right;}
 
-.col-12{
-    width:100%;
-    float:left;
-}
-
-.col-3{
-    width: 25%;
-    float:left;
-}
-
- .abstand{
-    margin-top:6px;
-    margin-bottom:6px;
-}
-
-.col-9{
-    width: 75%;
-    float:left;
-}
-
-.h1{
-    font-size: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.ansprechpartner{
-    text-align:right;
-    padding-right:5px;
-}
-.h2{
-    font-size: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-bottom:6px;
-
-}
-
-footer{
-    background-color: lightgrey;
+.col-20{
+    width: 20%;
     text-align: center;
-    position: fixed;
-    bottom:0;
-    padding:10px;
-    left:0;
-    right:0;
-    font-size: small;
-}
-a {
-    color:#4f4e4e;
-}
-a:hover{
-    color:black;
 }
 
+.icon{  width: 100%; }
+
+.icondescription{ text-algin:center;  }
+
+[class*="col-"] {  float:left; }
+
+.divider{
+    width: 100%;
+    background-color:lightgrey;
+    padding:2px;
+}
 
 @media only screen and (min-width: 500px) {
 
@@ -106,6 +91,22 @@ a:hover{
         margin-left:5px;
         margin-bottom:10px;
     }
+
+    [class*="col-"] {
+        padding:15px;
+    }
+
+    .textheader{ font-size: 20px;}
+
+    .numberheader{ font-size: 18px; }
+
+    .icondescription{  margin-top:10px; }
+
+    .col-3{  width: 25%; }
+
+    .col-9{  width: 75%;}
+
+    .distanceLeft{ padding-left: 12%;}
 }
 
 @media only screen and (max-width: 499px){
@@ -113,6 +114,27 @@ a:hover{
     .logo{
         width:60%;
         margin-top:5%
+    }
+
+    [class*="col-"] {
+        padding:2px;
+    }
+
+   header, body{
+        font-size:x-small;
+    }
+
+   .col-3{ width: 30%;}
+   .col-7{width: 70%;}
+
+   .col-12-Verlauf{
+       width:100%;
+       float:left;
+   }
+
+    .icondescription{
+        margin-top:2px;
+        font-size: xx-small;
     }
 
 }
