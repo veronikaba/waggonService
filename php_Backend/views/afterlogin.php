@@ -4,10 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="views/myStylesAfterLogin.css">
+    <link rel="stylesheet" href="myStylesAfterLogin.css">
 
 </head>
  <body>
+ <?php
+ $db = new mysqli('localhost', 'root', '', 'waggonservice');
+ if(mysqli_connect_errno($db)) {
+     echo "Failed to connect to MySQL:" . mysqli_connect_error();
+ }
+ ?>
  <div class="content">
  <header>
      <p>Sprache deutsch englisch</p>
@@ -18,7 +24,7 @@
      <p class="textright">Abmelden</p>
  </div>
 
- <img src="views/02_WSG_logo.png" alt="Logo" class="logo"">
+ <img src="02_WSG_logo.png" alt="Logo" class="logo"">
  <p class="auftragstext">Auftragsübersicht</p>
 
  <div class="inner-addon right-addon">
@@ -37,6 +43,21 @@
         </tr>
         </thead>
         <tbody>
+        <tr>
+            <?php
+
+
+            $result = $db->query("SELECT maintenancejob.jobnumber,VEHICLE.VEHICLENUMBER,  FROM maintenancejob JOIN VEHICLE ON maintenancejob.vehicle_id = VEHICLE.ID WHERE ");
+            if ($result->num_rows > 0 ) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo "<td>".$row['maintenancejob.jobnumber']."</td><td>".$row['VEHICLE.VEHICLENUMBER']."</td>";
+                }
+
+            } else {
+                echo "0 results";
+            }?>
+        </tr>
         <tr>
             <td>2017101201</td>
             <td>37 80 45 41 015-6</td>
