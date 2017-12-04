@@ -47,7 +47,7 @@
  </div>
 
  <div style="overflow-x:auto;">
-     <table id="myTable">
+     <table id="myTable" class="table table-striped table-hover">
         <thead>
         <tr>
             <th>Auftragsnummer</th>
