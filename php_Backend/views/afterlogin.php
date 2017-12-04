@@ -33,7 +33,7 @@
              echo "0 results";
          }?>
 
-         ?>
+
         </p>
      <p class="textright">Abmelden</p>
  </div>
@@ -61,7 +61,7 @@
             <?php
             $result = $db->query("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, USER.DISPLAYNAME
             FROM `maintenancejob`  JOIN `VEHICLE` ON maintenancejob.vehicle_id = VEHICLE.ID JOIN `maintenancejobstate`on maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN `USER` ON maintenancejob.clerk_id = USER.USERNAME
-            WHERE order_id IN (SELECT id FROM `order`WHERE company_id = 321)");
+            WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)");
             if ($result->num_rows > 0 ) {
                 while($row = $result->fetch_assoc()) {
                     echo "<tr><td>".$row["jobnumber"]."</td><td>".$row["VEHICLENUMBER"]." </td><td>".$row["DESCRIPTION"]." </td><td>".$row["DISPLAYNAME"]. "</td></tr>";
