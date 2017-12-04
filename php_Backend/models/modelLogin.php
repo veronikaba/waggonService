@@ -8,7 +8,8 @@ class Model {
 
     if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 
-      if ( trim($_REQUEST['username']) == '321' && trim($_REQUEST['password']) == 'passwort'){
+      if (( trim($_REQUEST['username']) == '305' && trim($_REQUEST['password']) == 'passwort') ||
+        ( trim($_REQUEST['username']) == '321' && trim($_REQUEST['password']) == 'passwort')){
         return 'login';
       }
 
