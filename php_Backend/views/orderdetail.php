@@ -88,7 +88,7 @@
                 <summary style=" text-decoration: underline;">05.11.17 Abschluss durch Mobilteam</summary>
                 <p>03.11.17 In Bearbeitung</p>
                 <p>01.11.17 Warten auf Teile</p>
-                <p>31.10.17 Arbeit geplant</p>
+                <p>30.01.17 Arbeit geplant</p>
             </details>
         </div>
     </div>
