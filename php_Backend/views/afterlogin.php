@@ -20,7 +20,21 @@
  </header>
 
  <div class="kunde">
-     <p class="textright"><span class="glyphicon glyphicon-user"></span>Name Kunde</p>
+     <p class="textright"><span class="glyphicon glyphicon-user"></span>
+         <?php
+         $login =  $_POST['username'];
+
+         $result=$db->query("SELECT FULLNAME FROM `COMPANY` WHERE ID = $login");
+         if ($result->num_rows > 0 ) {
+         while($row = $result->fetch_assoc()) {
+             echo $row['FULLNAME'] ;
+         }}
+         else {
+             echo "0 results";
+         }?>
+
+         ?>
+        </p>
      <p class="textright">Abmelden</p>
  </div>
 
@@ -45,35 +59,16 @@
         <tbody>
 
             <?php
-            $result = $db->query("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION
-            FROM `maintenancejob`  JOIN `VEHICLE` ON maintenancejob.vehicle_id = VEHICLE.ID JOIN `maintenancejobstate`on maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME
+            $result = $db->query("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, USER.DISPLAYNAME
+            FROM `maintenancejob`  JOIN `VEHICLE` ON maintenancejob.vehicle_id = VEHICLE.ID JOIN `maintenancejobstate`on maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN `USER` ON maintenancejob.clerk_id = USER.USERNAME
             WHERE order_id IN (SELECT id FROM `order`WHERE company_id = 321)");
             if ($result->num_rows > 0 ) {
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr><td>".$row["jobnumber"]."</td><td>".$row["VEHICLENUMBER"]." </td><td>".$row["DESCRIPTION"]."</td></tr>";
+                    echo "<tr><td>".$row["jobnumber"]."</td><td>".$row["VEHICLENUMBER"]." </td><td>".$row["DESCRIPTION"]." </td><td>".$row["DISPLAYNAME"]. "</td></tr>";
                 }
             } else {
                 echo "0 results";
             }?>
-
-        <tr>
-            <td>2017101201</td>
-            <td>37 80 45 41 015-6</td>
-            <td>Arbeit geplant</td>
-            <td>Manuel Fischer</td>
-        </tr>
-        <tr>
-            <td>2017100200</td>
-            <td>37 80 45 41 015-6</td>
-            <td>abgeschlossen</td>
-            <td>Stefanie Haupt</td>
-        </tr>
-        <tr>
-            <td>2017100010</td>
-            <td>37 80 45 41 015-7</td>
-            <td>abgeschlossen</td>
-            <td>Manuel Fischer</td>
-        </tr>
         </tbody>
 
     </table>

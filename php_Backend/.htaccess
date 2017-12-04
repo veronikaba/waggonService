@@ -1,0 +1,8 @@
+<Directory /var/www/html>
+Redirect 301 /index.php http://waggonservice.f4.htw-berlin.de/waggonService/php_Backend/index.php
+</Directory>
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule /index.php /waggonService/php_Backend/index.php
+</IfModule>
