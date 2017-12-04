@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="views/myStylesOrderDetail.css">
+    <link rel="stylesheet" href="myStylesOrderDetail.css">
 </head>
 <body>
 <div class="content">
@@ -15,7 +15,7 @@
         <p class="distanceTop"><span class="glyphicon glyphicon-user"></span>  Name Kunde</p>
         <p class="distanceTop">Abmelden</p>
     </div>
-    <img src="views/02_WSG_logo.png" alt="Logo" class="logo"">
+    <img src="02_WSG_logo.png" alt="Logo" class="logo"">
 
     <div class="rows orange textheader">
        <div class="col-3">Auftrag / Projekt</div>
@@ -28,31 +28,31 @@
 
             <div class="col-20 ">
 
-                <img src="views/icons/eins.png" alt="icon" class="icon">
+                <img src="icons/eins.png" alt="icon" class="icon">
                 <div class="icondescription">Auftrag eingeangen</div>
 
             </div>
             <div class="col-20">
 
-                <img src="views/icons/zwei.png" alt="icon" class="icon">
+                <img src="icons/zwei.png" alt="icon" class="icon">
                 <div class="icondescription">Auftrag bestätigt</div>
 
             </div>
             <div class="col-20">
 
-                <img src="views/icons/drei.png" alt="icon" class="icon">
+                <img src="icons/drei.png" alt="icon" class="icon">
                 <div class="icondescription">in Bearbeitung</div>
 
             </div>
             <div class="col-20">
 
-                <img src="views/icons/vier.png" alt="icon" class="icon">
+                <img src="icons/vier.png" alt="icon" class="icon">
                 <div class="icondescription">Instandhaltung abgeschlossen</div>
 
             </div>
             <div class="col-20">
 
-                <img src="views/icons/fünf.png" alt="icon" class="icon">
+                <img src="icons/fünf.png" alt="icon" class="icon">
                 <div class="icondescription">Auftrag abgeschlossen</div>
 
             </div>
