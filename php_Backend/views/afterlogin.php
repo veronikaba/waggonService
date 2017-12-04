@@ -47,7 +47,7 @@
  </div>
 
  <div style="overflow-x:auto;">
-     <table id="myTable" class="table table-striped table-hover">
+     <table class="table table-striped table-hover">
         <thead>
         <tr>
             <th>Auftragsnummer</th>
@@ -56,7 +56,7 @@
             <th>Zuständigkeit</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody id="myTable">
 
             <?php
             $result = $db->query("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, USER.DISPLAYNAME
