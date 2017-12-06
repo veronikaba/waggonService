@@ -31,15 +31,13 @@ a {  color:#4f4e4e;  }
 
 a:hover{  color:black;  }
 
-header{
-    text-align: right;
-    font-size: small;
-    margin-right:5px;
-}
-
 .kunde{
     float:right;
     margin-right:5px;
+}
+
+.kunde , .logo{
+    margin-top: 1.5%;
 }
 
 .distanceTop{
@@ -113,14 +111,15 @@ header{
 
     .logo{
         width:60%;
-        margin-top:5%
+        margin-left:1%;
+        margin-bottom:10px;
     }
 
     [class*="col-"] {
         padding:2px;
     }
 
-   header, body{
+   .content{
         font-size:x-small;
     }
 
@@ -136,5 +135,10 @@ header{
         margin-top:2px;
         font-size: xx-small;
     }
+
+    footer{
+        font-size:smaller;
+    }
+
 
 }

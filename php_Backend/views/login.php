@@ -9,21 +9,18 @@
 <body>
 <div class="content">
 
-    <header>
-        <p>Sprache deutsch englisch</p>
-    </header>
     <?php
     echo $result;
     ?>
 
     <div class="col-12">
         <img src="views/02_WSG_logo.png" alt="Logo" class="logo"">
-        <form action=" "  method="POST">
+        <form action="afterlogin.php "  method="POST">
             <p class="logintext"><b>LOGIN</b></p>
             <input id="username" class="form-control" style="width:180px;" name="username"  placeholder="Kundennummer" type="text" required="required" />
             <input id="password" class="form-control" style="width:180px;" name="password" placeholder="Passwort" type="password" required="required"  />
             <button type="submit" class="btn btn-default" >Einloggen</button>
-            <button type="reset" class="btn btn-default">Abbrechen</button>
+
         </form></div>
 
     <div class="push"></div>

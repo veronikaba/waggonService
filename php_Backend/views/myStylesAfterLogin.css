@@ -11,10 +11,10 @@ html, body {
 .content {
     min-height: 100%;
     margin: 0 auto -20px;
+
 }
 footer,
-.push {
-
+.pushFooter {
     height: 20px;
 }
 
@@ -24,14 +24,13 @@ footer{
     font-size: small;
 }
 
-header{
-    text-align: right;
-    font-size: small;
-}
-
 .kunde{
     float:right;
     margin-right:10px;
+}
+
+.kunde , .logo{
+    margin-top: 1.5%;
 }
 
 .glyphicon-user{
@@ -68,36 +67,11 @@ tbody{
 a {
     color:#4f4e4e;
 }
-a:hover{
-    color:black;
+a:hover {
+    color: black;
 }
-
-#myTable {
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #ddd;
-    font-size: 18px;
-}
-
-#myTable th, #myTable td {
-    text-align: left;
-    padding: 12px;
-}
-
-#myTable tr {
-    border-bottom: 1px solid #ddd;
-}
-
-#myTable tr.header, #myTable tr:hover {
-    background-color: #f1f1f1;
-}
-
 
 @media only screen and (min-width: 500px){
-
-    header{
-        margin-right:10px;
-    }
 
     .logo{
         width:470px;
@@ -123,8 +97,12 @@ a:hover{
 
 @media only screen and (max-width: 499px){
 
+    .kunde{
+        font-size:x-small;
+    }
+
     .logo{
-        width:50%;
+        width:60%;
         margin-left:1%;
         margin-bottom:10px;
     }
@@ -132,17 +110,18 @@ a:hover{
     .auftragstext{
         background-color: #eb5f0a;
         border-radius:1px;
-        font-size: 20px;
+        font-size: 18px;
         width:200px;
         color:white;
         text-align:center;
         margin-bottom:10px;
     }
 
-    thead{
-        font-size: smaller;
+    thead , #MyTable{
+        font-size: x-small;
     }
-    tbody{
+
+    footer{
         font-size: smaller;
     }
 }

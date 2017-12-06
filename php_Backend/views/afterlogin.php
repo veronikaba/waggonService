@@ -15,9 +15,6 @@
  }
  ?>
  <div class="content">
- <header>
-     <p>Sprache deutsch englisch</p>
- </header>
 
  <div class="kunde">
      <p class="textright"><span class="glyphicon glyphicon-user"></span>
@@ -32,9 +29,7 @@
          else {
              echo "0 results";
          }?>
-
-
-        </p>
+     </p>
      <p class="textright">Abmelden</p>
  </div>
 
@@ -103,7 +98,7 @@
          }
      </script>
  </div>
-     <div class="push"></div>
+     <div class="pushFooter"></div>
  </div>
 
  <footer>
