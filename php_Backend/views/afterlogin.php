@@ -12,10 +12,11 @@
 </head>
  <body>
  <?php
- $db = new mysqli('localhost', 'root', 'Te17e4so', 'waggonservice');
- if(mysqli_connect_errno($db)) {
-     echo "Failed to connect to MySQL:" . mysqli_connect_error();
- }
+ include_once "conf/config.php";
+ 
+ $pdo = new PDO("mysql:host=$url;dbname=$database", "$username", "$pw");
+
+
  ?>
  <div class="content">
 
@@ -24,7 +25,7 @@
          <?php
          $login =  $_POST['username'];
 
-         $result=$db->query("SELECT FULLNAME FROM `COMPANY` WHERE ID = $login");
+         $result=$pdo->prepare("SELECT FULLNAME FROM `COMPANY` WHERE ID = $login");
          if ($result->num_rows > 0 ) {
          while($row = $result->fetch_assoc()) {
              echo $row['FULLNAME'] ;
@@ -57,7 +58,7 @@
         <tbody id="myTable">
 
           <?php
-         $result = $db->query("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, USER.DISPLAYNAME
+         $result = $pdo->prepare("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, USER.DISPLAYNAME
          FROM `maintenancejob`  JOIN `VEHICLE` ON maintenancejob.vehicle_id = VEHICLE.ID JOIN `maintenancejobstate`on maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN `USER` ON maintenancejob.clerk_id = USER.USERNAME
          WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)");
          if ($result->num_rows > 0 ) {
