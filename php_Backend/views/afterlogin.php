@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="views/myStylesAfterLogin.css">
+    <link rel="stylesheet" href="views/css/myStylesAfterLogin.css">
+
+    <script src="views/js/afterloginClickable.js"></script>
+
 
 </head>
  <body>
@@ -59,7 +62,7 @@
          WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)");
          if ($result->num_rows > 0 ) {
              while($row = $result->fetch_assoc()) {
-                 echo utf8_encode("<tr><td><a href='views/orderdetail.php'>".$row["jobnumber"]."</a></td></a><td><a href='views/orderdetail.php'>".$row["VEHICLENUMBER"]." </a></td><td><a href='views/orderdetail.php'>".$row["DESCRIPTION"]." </a></td><td><a href='views/orderdetail.php'>".$row["DISPLAYNAME"]. "</a></td></tr>");
+                 echo utf8_encode("<tr id='row'><td><a href='views/orderdetail.php'>".$row["jobnumber"]."</a></td></a><td><a href='views/orderdetail.php'>".$row["VEHICLENUMBER"]." </a></td><td><a href='views/orderdetail.php'>".$row["DESCRIPTION"]." </a></td><td><a href='views/orderdetail.php'>".$row["DISPLAYNAME"]. "</a></td></tr>");
              }
 
          } else {
