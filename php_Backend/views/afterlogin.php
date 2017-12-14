@@ -59,7 +59,7 @@
          WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)");
          if ($result->num_rows > 0 ) {
              while($row = $result->fetch_assoc()) {
-                 echo utf8_encode("<tr><td><a href='views/orderdetail.php'>".$row["jobnumber"]."</a></td></a><td><a href='views/orderdetail.php'>".$row["VEHICLENUMBER"]." </a></td><td><a href='views/orderdetail.php'>".$row["DESCRIPTION"]." </a></td><td><a href='views/orderdetail.php'>".$row["DISPLAYNAME"]. "</a></td></tr>";
+                 echo utf8_encode("<tr><td><a href='views/orderdetail.php'>".$row["jobnumber"]."</a></td></a><td><a href='views/orderdetail.php'>".$row["VEHICLENUMBER"]." </a></td><td><a href='views/orderdetail.php'>".$row["DESCRIPTION"]." </a></td><td><a href='views/orderdetail.php'>".$row["DISPLAYNAME"]. "</a></td></tr>");
              }
 
          } else {
