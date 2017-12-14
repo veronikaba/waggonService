@@ -24,12 +24,12 @@
       <file leaf-file-name="afterlogin.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/afterlogin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+            <state relative-caret-position="525">
+              <caret line="35" column="44" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
               <folding>
-                <marker date="1513253785000" expanded="true" signature="879:921" ph="SELECT FULLN... COMPANY" />
-                <marker date="1513253785000" expanded="true" signature="1881:2304" ph="SELECT maint... maintenancejob" />
-                <marker date="1513253785000" expanded="true" signature="2256:2297" ph="SELECT id FR... order" />
+                <marker date="1513253935000" expanded="true" signature="879:921" ph="SELECT FULLN... COMPANY" />
+                <marker date="1513253935000" expanded="true" signature="1875:2298" ph="SELECT maint... maintenancejob" />
+                <marker date="1513253935000" expanded="true" signature="2250:2291" ph="SELECT id FR... order" />
               </folding>
             </state>
           </provider>
@@ -153,12 +153,12 @@
       <updated>1509006063619</updated>
       <workItem from="1509006065236" duration="3125000" />
       <workItem from="1513244151850" duration="943000" />
-      <workItem from="1513253757607" duration="33000" />
+      <workItem from="1513253757607" duration="143000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4101000" />
+    <option name="totallyTimeSpent" value="4211000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="180" y="22" width="1224" height="1024" extended-state="0" />
@@ -242,9 +242,9 @@
         <state relative-caret-position="930">
           <caret line="62" column="14" lean-forward="true" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
           <folding>
-            <marker date="1513253785000" expanded="true" signature="879:921" ph="SELECT FULLN... COMPANY" />
-            <marker date="1513253785000" expanded="true" signature="1881:2304" ph="SELECT maint... maintenancejob" />
-            <marker date="1513253785000" expanded="true" signature="2256:2297" ph="SELECT id FR... order" />
+            <marker date="1513253935000" expanded="true" signature="879:921" ph="SELECT FULLN... COMPANY" />
+            <marker date="1513253935000" expanded="true" signature="1875:2298" ph="SELECT maint... maintenancejob" />
+            <marker date="1513253935000" expanded="true" signature="2250:2291" ph="SELECT id FR... order" />
           </folding>
         </state>
       </provider>
@@ -262,9 +262,9 @@
         <state relative-caret-position="150">
           <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
           <folding>
-            <marker date="1513253785000" expanded="true" signature="879:921" ph="SELECT FULLN... COMPANY" />
-            <marker date="1513253785000" expanded="true" signature="1881:2304" ph="SELECT maint... maintenancejob" />
-            <marker date="1513253785000" expanded="true" signature="2256:2297" ph="SELECT id FR... order" />
+            <marker date="1513253935000" expanded="true" signature="879:921" ph="SELECT FULLN... COMPANY" />
+            <marker date="1513253935000" expanded="true" signature="1875:2298" ph="SELECT maint... maintenancejob" />
+            <marker date="1513253935000" expanded="true" signature="2250:2291" ph="SELECT id FR... order" />
           </folding>
         </state>
       </provider>
@@ -312,12 +312,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/afterlogin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+        <state relative-caret-position="525">
+          <caret line="35" column="44" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
           <folding>
-            <marker date="1513253785000" expanded="true" signature="879:921" ph="SELECT FULLN... COMPANY" />
-            <marker date="1513253785000" expanded="true" signature="1881:2304" ph="SELECT maint... maintenancejob" />
-            <marker date="1513253785000" expanded="true" signature="2256:2297" ph="SELECT id FR... order" />
+            <marker date="1513253935000" expanded="true" signature="879:921" ph="SELECT FULLN... COMPANY" />
+            <marker date="1513253935000" expanded="true" signature="1875:2298" ph="SELECT maint... maintenancejob" />
+            <marker date="1513253935000" expanded="true" signature="2250:2291" ph="SELECT id FR... order" />
           </folding>
         </state>
       </provider>
