@@ -34,7 +34,7 @@
              echo "0 results";
          }?>
      </p>
-     <p class="textright"><a href="index.php">Abmelden</a></p>
+     <p class="textright"><a href="index.php"><span class="glyphicon glyphicon-log-out"></span>Abmelden</a></p>
  </div>
 
  <img src="views/02_WSG_logo.png" alt="Logo" class="logo"">
