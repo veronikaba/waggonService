@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="views/css/myStylesAfterLogin.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="views/js/afterloginClickable.js"></script>
 
 
@@ -62,7 +62,7 @@
          WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)");
          if ($result->num_rows > 0 ) {
              while($row = $result->fetch_assoc()) {
-                 echo utf8_encode("<tr id='row'><td><a href='views/orderdetail.php'>".$row["jobnumber"]."</a></td></a><td><a href='views/orderdetail.php'>".$row["VEHICLENUMBER"]." </a></td><td><a href='views/orderdetail.php'>".$row["DESCRIPTION"]." </a></td><td><a href='views/orderdetail.php'>".$row["DISPLAYNAME"]. "</a></td></tr>");
+                 echo utf8_encode("<tr class='clickable-row' data-href='www.milliondollarhomepage.com/' ><td><a href='views/orderdetail.php'>".$row["jobnumber"]."</a></td></a><td><a href='views/orderdetail.php'>".$row["VEHICLENUMBER"]." </a></td><td><a href='views/orderdetail.php'>".$row["DESCRIPTION"]." </a></td><td><a href='views/orderdetail.php'>".$row["DISPLAYNAME"]. "</a></td></tr>");
              }
 
          } else {
