@@ -33,7 +33,7 @@
              echo "0 results";
          }?>
      </p>
-     <p class="textright">Abmelden</p>
+     <p class="textright"><a href="views/login.php">Abmelden</a></p>
  </div>
 
  <img src="views/02_WSG_logo.png" alt="Logo" class="logo"">
