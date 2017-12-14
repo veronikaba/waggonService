@@ -27,7 +27,7 @@
 
          $result=$pdo->prepare("SELECT FULLNAME FROM `COMPANY` WHERE ID = $login");
          if ($result->num_rows > 0 ) {
-         while($row = $result->fetch_assoc()) {
+         while($row = $result->fetch()) {
              echo $row['FULLNAME'] ;
          }}
          else {
@@ -62,7 +62,7 @@
          FROM `maintenancejob`  JOIN `VEHICLE` ON maintenancejob.vehicle_id = VEHICLE.ID JOIN `maintenancejobstate`on maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN `USER` ON maintenancejob.clerk_id = USER.USERNAME
          WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)");
          if ($result->num_rows > 0 ) {
-             while($row = $result->fetch_assoc()) {
+             while($row = $result->fetch()) {
                  echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php'><td>".$row["jobnumber"]."</td><td>".$row["VEHICLENUMBER"]."</td><td>".$row["DESCRIPTION"]."</td><td>".$row["DISPLAYNAME"]. "</td></tr>");
              }
 
