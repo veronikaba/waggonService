@@ -26,7 +26,7 @@
 
             <div class="col-20 ">
 
-                <img src="icons/eins.png" alt="icon" class="icon">
+                <img src="icons/einsblau.png" alt="icon" class="icon">
                 <div class="icondescription">Auftrag eingeangen</div>
 
             </div>
