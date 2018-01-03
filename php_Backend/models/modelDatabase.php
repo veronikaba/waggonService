@@ -22,7 +22,20 @@ WHERE order_id IN (SELECT id FROM order WHERE company_id = ?");
 public function getContactperson(){ //Ansprechpartner
     $pdo = connect();
 
-    $statement = $pdo->prepare("SELECT USER.DISPLAYNAME FROM `order` join `USER`on order.creator_id = USER.USERNAME WHERE order.id = ?");
+    $login = $POST_['username'];
+
+    $statement = $pdo->prepare("SELECT USER.DISPLAYNAME FROM `order` join `USER`on order.creator_id = USER.USERNAME WHERE order.id = $login");
+
+    while ($row = $statement->fetch())
+    {
+        $contact = $row['Kundenname'];
+
+    }
+
+    /* ??? $res = $con->query("SELECT USER.DISPLAYNAME FROM `order` join `USER`on order.creator_id = USER.USERNAME WHERE order.id = ?");
+    foreach($res as $dsatz)
+        echo $dsatz["name"] . ", " . $dsatz["gehalt"] . "<br />";
+    echo "<br />"; */
 
 }
 
@@ -47,16 +60,25 @@ public function getLocation(){ //Standort
     $pdo = connect();
 
     $statement = $pdo->prepare("SELECT location.denotation FROM `order`JOIN `location` ON order.location_id = location.id WHERE order.id = ?");
+    $statement->execute(array($id));
 
 }
 
-public function getCustomerData(){ //Kundenname
+public static function getCustomerData($username){ //Kundenname
+    $pdo = connect();
+    $statement= $pdo->prepare("SELECT FULLNAME FROM `COMPANY` WHERE ID = $username");
+    $statement->execute(array($username));
+    return $statement;
+
+}
+
+public static function getPassword($username){
     $pdo = connect();
 
-    $username = ($_POST('username'));
-
-    $statement= $pdo->prepare("SELECT FULLNAME FROM `COMPANY` WHERE ID = ?");
+    $statement=$pdo->prepare("SELECT * FROM `COMPANY` WHERE ID = ?");
     $statement->execute(array($username));
+    return $statement;
+
 }
 }
 

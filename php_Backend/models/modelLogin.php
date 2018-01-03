@@ -1,6 +1,6 @@
 <?php
 define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
-require_once(ABS_PATH . '/models/modelLogin.php');
+require_once(ABS_PATH . '/models/modelDatabase.php');
 
 class Model {
 
@@ -8,14 +8,17 @@ class Model {
 
     if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 
-      if (( trim($_REQUEST['username']) == '305' && trim($_REQUEST['password']) == 'passwort') ||
-        ( trim($_REQUEST['username']) == '321' && trim($_REQUEST['password']) == 'passwort')){
-        return 'login';
-      }
+        $abfrage = DB::getPassword(trim($_POST['username']));
 
-      else {
-        return 'ungültige Eingabe';
-      }
+        $pw = trim($_REQUEST['password']);
+        if($pw==$abfrage['PASSWORT']){
+
+          return 'login';
+        }
+        else {
+          echo "ungültige Eingabe";
+        }
+
     }
     }
 }
