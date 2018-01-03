@@ -1,6 +1,6 @@
 <?php
 
-require_once ('/models/modelsAfterlogin.php');
+require_once ('models/modelsAfterlogin.php');
 
 class ControllerAfterLogin {
 

@@ -1,7 +1,7 @@
 <?php
 
 define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
-require_once(ABS_PATH . '/models/modelLogin.php');
+require_once(ABS_PATH . 'models/modelLogin.php');
 class Controller {
     public $model;
     public function __construct() {
