@@ -73,7 +73,7 @@ public static function getCustomerData($username){ //Kundenname
 }
 
 public static function getPassword($username){
-    $pdo = connect();
+    $pdo = DB::connect();
 
     $statement=$pdo->prepare("SELECT * FROM `COMPANY` WHERE ID = ?");
     $statement->execute(array($username));
