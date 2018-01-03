@@ -41,7 +41,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modelDatabase.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="modelDatabase.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/modelDatabase.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="863">
@@ -92,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modelLogin.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="modelLogin.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/modelLogin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+            <state relative-caret-position="165">
+              <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -123,9 +123,9 @@
         <option value="$PROJECT_DIR$/views/afterlogin.php" />
         <option value="$PROJECT_DIR$/controllers/controller.php" />
         <option value="$PROJECT_DIR$/controllers/controllerafterlogin.php" />
-        <option value="$PROJECT_DIR$/models/modelLogin.php" />
         <option value="$PROJECT_DIR$/conf/config.php" />
         <option value="$PROJECT_DIR$/models/modelDatabase.php" />
+        <option value="$PROJECT_DIR$/models/modelLogin.php" />
       </list>
     </option>
   </component>
@@ -224,12 +224,12 @@
       <workItem from="1513256627278" duration="282000" />
       <workItem from="1513801184379" duration="3806000" />
       <workItem from="1513841703756" duration="2273000" />
-      <workItem from="1515009821781" duration="6395000" />
+      <workItem from="1515009821781" duration="6488000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18948000" />
+    <option name="totallyTimeSpent" value="19041000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -685,14 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/modelLogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/modelDatabase.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="863">
@@ -714,6 +706,14 @@
             <marker date="1515022180000" expanded="true" signature="2577:2613" ph="SELECT * FRO... COMPANY" />
             <marker date="1515022180000" expanded="true" signature="2577:2615" ph="SELECT PASSW... COMPANY" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/modelLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>

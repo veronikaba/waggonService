@@ -9,6 +9,7 @@ class Model {
     if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 
         $abfrage = DB::getPassword(trim($_POST['username']));
+        var_dump($abfrage);
 
         $pw = trim($_REQUEST['password']);
         if($pw==$abfrage['PASSWORT']){
