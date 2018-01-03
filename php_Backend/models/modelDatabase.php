@@ -6,7 +6,7 @@ class DB {
 
 
 public static function connect(){
-    return $pdo = new PDO("mysql:host=$url; dbname=$database", "$username", "$pw") ;
+    return $pdo = new PDO("mysql:host=localhost; dbname=waggonservice", "root", "Te17e4so") ;
 }
 
 public function getDataAfterlogin(){ //Abfrage der Daten für die Tabelle bei  afterlogin.php
