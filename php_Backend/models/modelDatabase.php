@@ -77,7 +77,7 @@ public static function getPassword($username){
 
     $statement=$pdo->prepare("SELECT * FROM `COMPANY` WHERE ID = ?");
     $statement->execute(array($username));
-    return $statement;
+    return $statement->fetchAll();
 
 }
 }
