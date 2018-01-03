@@ -1,12 +1,12 @@
 <?php
 define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
-require_once (ABS_PATH . '/conf/config.php');
+include ABS_PATH . '/conf/config.php';
 
 class DB {
 
 
-public function connect(){
-    return $pdo = new PDO("mysql:host=$url;dbname=$database", "$username", "$pw") ;
+public static function connect(){
+    return $pdo = new PDO("mysql:host=$url; dbname=$database", "$username", "$pw") ;
 }
 
 public function getDataAfterlogin(){ //Abfrage der Daten für die Tabelle bei  afterlogin.php
