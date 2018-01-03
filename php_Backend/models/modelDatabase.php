@@ -1,6 +1,6 @@
 <?php
 define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
-require_once (ABS_PATH . 'conf/config.php');
+require_once (ABS_PATH . '/conf/config.php');
 
 class DB {
 
