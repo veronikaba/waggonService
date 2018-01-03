@@ -1,6 +1,6 @@
 <?php
-
-require_once ('models/modelsAfterlogin.php');
+define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
+require_once (ABS_PATH . '/models/modelsAfterlogin.php');
 
 class ControllerAfterLogin {
 
