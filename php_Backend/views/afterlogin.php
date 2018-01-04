@@ -14,7 +14,7 @@
 <?php
 define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
 require_once ('/models/modelDatabase.php');
-$pdo=DB::connect();
+$pdo= new PDO('mysql:host=localhost ; dbname=waggonservice', 'root', 'Te17e4so' );
 ?>
 <div class="content">
 
