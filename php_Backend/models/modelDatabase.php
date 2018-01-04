@@ -19,10 +19,13 @@ WHERE order_id IN (SELECT id FROM order WHERE company_id = ?");
 
 }
 
+public function getOrderId(){
+    // Funktion, um Wert der Auftragsnummer zu übergeben, damit diese auf orderdetail.php als Referenz genutzt werden kann
+}
+
 public function getContactperson(){ //Ansprechpartner
     $pdo = connect();
 
-    $login = $POST_['username'];
 
     $statement = $pdo->prepare("SELECT USER.DISPLAYNAME FROM `order` join `USER`on order.creator_id = USER.USERNAME WHERE order.id = $login");
 
@@ -60,7 +63,7 @@ public function getLocation(){ //Standort
     $pdo = connect();
 
     $statement = $pdo->prepare("SELECT location.denotation FROM `order`JOIN `location` ON order.location_id = location.id WHERE order.id = ?");
-    $statement->execute(array($id));
+    $statement->execute(array($));
 
 }
 
