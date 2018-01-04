@@ -12,9 +12,11 @@
 </head>
 <body>
 <?php
-define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
-require_once ('/models/modelDatabase.php');
-$pdo= new PDO('mysql:host=localhost ; dbname=waggonservice', 'root', 'Te17e4so' );
+
+$db = new mysqli('localhost', 'root', 'Te17e4so', 'waggonservice');
+if(mysqli_connect_errno($db)) {
+    echo "Failed to connect to MySQL:" . mysqli_connect_error();
+}
 ?>
 <div class="content">
 
@@ -23,10 +25,13 @@ $pdo= new PDO('mysql:host=localhost ; dbname=waggonservice', 'root', 'Te17e4so' 
             <?php
             $login =  $_POST['username'];
 
-           $sql="SELECT FULLNAME FROM `COMPANY` WHERE ID = $login";
-           foreach($pdo->query($sql) as $row){
-               echo $row['FULLNAME'];
-
+            $result=$db->query("SELECT FULLNAME FROM `COMPANY` WHERE ID = $login");
+            if ($result->num_rows > 0 ) {
+                while($row = $result->fetch_assoc()) {
+                    echo $row['FULLNAME'] ;
+                }}
+            else {
+                echo "0 results";
             }?>
         </p>
         <p class="textright"><a href="index.php"><span class="glyphicon glyphicon-log-out"></span>Abmelden</a></p>
@@ -53,16 +58,18 @@ $pdo= new PDO('mysql:host=localhost ; dbname=waggonservice', 'root', 'Te17e4so' 
             <tbody id="myTable">
 
             <?php
-            $sql = "SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, USER.DISPLAYNAME
+            $result = $db->query("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, USER.DISPLAYNAME
          FROM `maintenancejob`  JOIN `VEHICLE` ON maintenancejob.vehicle_id = VEHICLE.ID JOIN `maintenancejobstate`on maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN `USER` ON maintenancejob.clerk_id = USER.USERNAME
-         WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)";
-            foreach($pdo->query($sql) as $row) {
-
+         WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)");
+            if ($result->num_rows > 0 ) {
+                while($row = $result->fetch_assoc()) {
+                    $id = $row["jobnumber"];
                     echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php'><td>".$row["jobnumber"]."</td><td>".$row["VEHICLENUMBER"]."</td><td>".$row["DESCRIPTION"]."</td><td>".$row["DISPLAYNAME"]. "</td></tr>");
+                }
 
-            }
-
-            ?>
+            } else {
+                echo "0 results";
+            }?>
             </tbody>
 
         </table>
