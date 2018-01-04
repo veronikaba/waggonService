@@ -63,7 +63,7 @@ public function getLocation(){ //Standort
     $pdo = connect();
 
     $statement = $pdo->prepare("SELECT location.denotation FROM `order`JOIN `location` ON order.location_id = location.id WHERE order.id = ?");
-    $statement->execute(array($));
+    //$statement->execute(array($));
 
 }
 
