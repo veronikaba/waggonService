@@ -52,6 +52,7 @@ if(mysqli_connect_errno($db)) {
                 <th>Auftragsnummer</th>
                 <th>Wagennummer</th>
                 <th>Status</th>
+                <th></th>
                 <th>Zuständigkeit</th>
             </tr>
             </thead>
@@ -63,14 +64,34 @@ if(mysqli_connect_errno($db)) {
          WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)");
             if ($result->num_rows > 0 ) {
                 while($row = $result->fetch_assoc()) {
-                    $id = $row["jobnumber"];
-                    echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php'><td>".$row["jobnumber"]."</td><td>".$row["VEHICLENUMBER"]."</td><td>".$row["DESCRIPTION"]."</td><td>".$row["DISPLAYNAME"]. "</td></tr>");
+                    $wert = utf8_encode($row["DESCRIPTION"]);
+                    echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php'><td>" . $row["jobnumber"] . "</td><td>" . $row["VEHICLENUMBER"] . "</td><td>" . $row["DESCRIPTION"]
+                        . "</td><td>" .status($wert). "</span></td><td>" . $row["DISPLAYNAME"] . "</td></tr>");
+
+
+
                 }
+
+
 
             } else {
                 echo "0 results";
             }?>
             </tbody>
+            <?php
+            function status($wert){
+
+                if($wert == 'In Klärung')
+                {
+                    return '<span style="color:darkorange;" class="glyphicon glyphicon-alert"></span>';
+                }
+
+                else if($wert == 'abgeschlossen'){
+                    return '<span style="color:green;" class="glyphicon glyphicon glyphicon-ok "></span>';
+                }
+            }
+            ?>
+
 
         </table>
         <script>
