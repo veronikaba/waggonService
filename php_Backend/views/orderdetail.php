@@ -17,7 +17,7 @@
 
     <div class="rows orange textheader">
        <div class="col-3">Auftrag / Projekt</div>
-        <div class="col-9 ansprechpartner"><?php echo $_GET['id']?>Ansprechpartner: Tim Müller</div>
+        <div class="col-9 ansprechpartner"><?php echo $_GET['jobnumber']?>Ansprechpartner: Tim Müller</div>
     </div>
 
     <div class="rows">
