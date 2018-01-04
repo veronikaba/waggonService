@@ -62,8 +62,8 @@ if(mysqli_connect_errno($db)) {
          WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)");
             if ($result->num_rows > 0 ) {
                 while($row = $result->fetch_assoc()) {
-                    $id = $row['jobnumber'];
-                    echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php?id='$id'><td>".$row["jobnumber"]."</td><td>".$row["VEHICLENUMBER"]."</td><td>".$row["DESCRIPTION"]."</td><td>".$row["DISPLAYNAME"]. "</td></tr>");
+                    $id = $row["jobnumber"];
+                    echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php?id=' $id'><td>".$row["jobnumber"]."</td><td>".$row["VEHICLENUMBER"]."</td><td>".$row["DESCRIPTION"]."</td><td>".$row["DISPLAYNAME"]. "</td></tr>");
                 }
 
             } else {
