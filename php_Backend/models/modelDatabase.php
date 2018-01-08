@@ -84,6 +84,14 @@ public static function getPassword($username){
     return $statement->fetchAll();
 
 }
+
+public static function getOrderDetailNumber($number){ //Jobnummer Detailansicht
+    $pdo = DB::connect();
+    $statement=$pdo->prepare("SELECT * FROM `order` WHERE `ordernumber` = ?");
+    $statement->execute(array($number));
+    return $statement->fetchAll();
+
+}
 }
 
 
