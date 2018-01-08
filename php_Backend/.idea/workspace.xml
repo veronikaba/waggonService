@@ -86,10 +86,10 @@
         <entry file="file://$PROJECT_DIR$/views/orderdetail.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="151" lean-forward="false" selection-start-line="19" selection-start-column="151" selection-end-line="19" selection-end-column="151" />
+              <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding>
-                <marker date="1515449523000" expanded="true" signature="2614:2646" ph="..." />
-                <marker date="1515449523000" expanded="true" signature="2958:2971" ph="..." />
+                <marker date="1515449662000" expanded="true" signature="2738:2770" ph="..." />
+                <marker date="1515449662000" expanded="true" signature="3082:3095" ph="..." />
               </folding>
             </state>
           </provider>
@@ -98,8 +98,8 @@
       <file leaf-file-name="modelLogin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/modelLogin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -233,12 +233,12 @@
       <workItem from="1513801184379" duration="3806000" />
       <workItem from="1513841703756" duration="2273000" />
       <workItem from="1515009821781" duration="19022000" />
-      <workItem from="1515448476646" duration="1029000" />
+      <workItem from="1515448476646" duration="1164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32604000" />
+    <option name="totallyTimeSpent" value="32739000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -739,8 +739,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/modelLogin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -748,10 +748,10 @@
     <entry file="file://$PROJECT_DIR$/views/orderdetail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="151" lean-forward="false" selection-start-line="19" selection-start-column="151" selection-end-line="19" selection-end-column="151" />
+          <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding>
-            <marker date="1515449523000" expanded="true" signature="2614:2646" ph="..." />
-            <marker date="1515449523000" expanded="true" signature="2958:2971" ph="..." />
+            <marker date="1515449662000" expanded="true" signature="2738:2770" ph="..." />
+            <marker date="1515449662000" expanded="true" signature="3082:3095" ph="..." />
           </folding>
         </state>
       </provider>
