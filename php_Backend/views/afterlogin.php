@@ -68,6 +68,9 @@ if(mysqli_connect_errno($db)) {
                     $wert = utf8_encode($row["DESCRIPTION"]);
                     echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php'><td>" . $row["jobnumber"] . "</td><td>" . $row["VEHICLENUMBER"] . "</td><td>" . $row["DESCRIPTION"]
                         . "</td><td>" .status($wert). "</span></td><td>" . $row["DISPLAYNAME"] . "</td></tr>");
+
+
+
                 }
 
 
