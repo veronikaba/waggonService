@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
     $(".clickable-row").click(function() {
-        window.location = $(this).data("href" + "id?=2017102001");
+        window.location = $(this).data("href" + "id?Bla=2017102001");
     });
 });
 
