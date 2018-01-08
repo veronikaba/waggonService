@@ -74,8 +74,7 @@ include(ABS_PATH . '/models/modelDatabase.php');
 
     <div class="rows grey numberheader">
         <div class="col-3">Auftragsnummer</div>
-        <div class="col-9"><?=
-        ?>
+        <div class="col-9"> BENIS
 </div>
     </div>
 
