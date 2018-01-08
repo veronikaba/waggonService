@@ -24,6 +24,7 @@ if(mysqli_connect_errno($db)) {
         <p class="textright"><span class="glyphicon glyphicon-user"></span>
             <?php
             $login =  $_POST['username'];
+            $GLOBALS["username"] = $_POST['username'];
 
             $result=$db->query("SELECT FULLNAME FROM `COMPANY` WHERE ID = $login");
             if ($result->num_rows > 0 ) {
