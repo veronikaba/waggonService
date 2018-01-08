@@ -1,3 +1,8 @@
+<?=
+define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
+include(ABS_PATH . '/models/modelDatabase.php');
+?>
+
 <html>
 <head>
     <title>Auftrag</title>
@@ -12,10 +17,7 @@
     <div class="kunde">
         <p class="distanceTop"><span class="glyphicon glyphicon-user"></span>
             <?php
-            define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
-            include(ABS_PATH . '/models/modelDatabase.php');
             echo DB::getCustomerData($_COOKIE['username'])[0]['FULLNAME'];
-
             ?>
             </p>
         <p class="distanceTop">Abmelden</p>

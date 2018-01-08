@@ -59,11 +59,12 @@ maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME WHERE mainte
 }
 
 
-public function getLocation(){ //Standort
-    $pdo = connect();
+public function getLocation($order){ //Standort
+    $pdo = DB::connect();
 
     $statement = $pdo->prepare("SELECT location.denotation FROM `order`JOIN `location` ON order.location_id = location.id WHERE order.id = ?");
-    //$statement->execute(array($));
+    $statement->execute(array($order));
+    return $statement->fetchAll();
 
 }
 
