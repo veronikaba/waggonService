@@ -64,13 +64,12 @@ if(mysqli_connect_errno($db)) {
          FROM `maintenancejob`  JOIN `VEHICLE` ON maintenancejob.vehicle_id = VEHICLE.ID JOIN `maintenancejobstate`on maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN `USER` ON maintenancejob.clerk_id = USER.USERNAME
          WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)");
             if ($result->num_rows > 0 ) {
+                $i = 0;
                 while($row = $result->fetch_assoc()) {
-                    $i = 0;
                     $wert = utf8_encode($row["DESCRIPTION"]);
                     echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php'><td $i>" . $row["jobnumber"] . "</td><td>" . $row["VEHICLENUMBER"] . "</td><td>" . $row["DESCRIPTION"]
                         . "</td><td>" .status($wert). "</span></td><td>" . $row["DISPLAYNAME"] . "</td></tr>");
                     $i++;
-
                 }
 
 
