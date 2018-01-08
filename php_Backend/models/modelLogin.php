@@ -9,7 +9,7 @@ class Model {
     if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 
         $abfrage = DB::getPassword(trim($_POST['username']));
-
+        setcookie("username",trim($_POST['username']),0);
 
         $pw = trim($_REQUEST['password']);
         if($pw==$abfrage[0]['PASSWORT']){
