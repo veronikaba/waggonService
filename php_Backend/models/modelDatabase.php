@@ -68,7 +68,7 @@ public function getLocation(){ //Standort
 }
 
 public static function getCustomerData($username){ //Kundenname
-    $pdo = connect();
+    $pdo = DB::connect();
     $statement= $pdo->prepare("SELECT FULLNAME FROM `COMPANY` WHERE ID = ?");
     $statement->execute(array($username));
     return $statement->fetchAll();
