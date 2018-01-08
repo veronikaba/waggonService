@@ -17,7 +17,7 @@
 
     <div class="rows orange textheader">
        <div class="col-3">Auftrag / Projekt</div>
-        <div class="col-9 ansprechpartner"><?php var_dump(DB::getCustomerData($GLOBALS["username"]))?>Ansprechpartner: Tim Müller</div>
+        <div class="col-9 ansprechpartner"><?php  include(ABS_PATH . 'models/modelDatabase.php'); var_dump(DB::getCustomerData($GLOBALS["username"]))?>Ansprechpartner: Tim Müller</div>
     </div>
 
     <div class="rows">
