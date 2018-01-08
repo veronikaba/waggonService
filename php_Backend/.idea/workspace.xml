@@ -86,10 +86,10 @@
         <entry file="file://$PROJECT_DIR$/views/orderdetail.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="71" lean-forward="false" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
+              <caret line="19" column="151" lean-forward="false" selection-start-line="19" selection-start-column="151" selection-end-line="19" selection-end-column="151" />
               <folding>
-                <marker date="1515449434000" expanded="true" signature="2612:2644" ph="..." />
-                <marker date="1515449434000" expanded="true" signature="2956:2969" ph="..." />
+                <marker date="1515449523000" expanded="true" signature="2614:2646" ph="..." />
+                <marker date="1515449523000" expanded="true" signature="2958:2971" ph="..." />
               </folding>
             </state>
           </provider>
@@ -233,12 +233,12 @@
       <workItem from="1513801184379" duration="3806000" />
       <workItem from="1513841703756" duration="2273000" />
       <workItem from="1515009821781" duration="19022000" />
-      <workItem from="1515448476646" duration="939000" />
+      <workItem from="1515448476646" duration="1029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32514000" />
+    <option name="totallyTimeSpent" value="32604000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -748,10 +748,10 @@
     <entry file="file://$PROJECT_DIR$/views/orderdetail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="71" lean-forward="false" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
+          <caret line="19" column="151" lean-forward="false" selection-start-line="19" selection-start-column="151" selection-end-line="19" selection-end-column="151" />
           <folding>
-            <marker date="1515449434000" expanded="true" signature="2612:2644" ph="..." />
-            <marker date="1515449434000" expanded="true" signature="2956:2969" ph="..." />
+            <marker date="1515449523000" expanded="true" signature="2614:2646" ph="..." />
+            <marker date="1515449523000" expanded="true" signature="2958:2971" ph="..." />
           </folding>
         </state>
       </provider>
