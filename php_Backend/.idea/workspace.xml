@@ -85,11 +85,11 @@
       <file leaf-file-name="orderdetail.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/orderdetail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="60" lean-forward="true" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+            <state relative-caret-position="240">
+              <caret line="16" column="64" lean-forward="false" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
               <folding>
-                <marker date="1515450114000" expanded="true" signature="2738:2770" ph="..." />
-                <marker date="1515450114000" expanded="true" signature="3082:3095" ph="..." />
+                <marker date="1515450224000" expanded="true" signature="2748:2780" ph="..." />
+                <marker date="1515450224000" expanded="true" signature="3092:3105" ph="..." />
               </folding>
             </state>
           </provider>
@@ -128,8 +128,8 @@
         <option value="$PROJECT_DIR$/conf/config.php" />
         <option value="$PROJECT_DIR$/views/afterlogin.php" />
         <option value="$PROJECT_DIR$/models/modelDatabase.php" />
-        <option value="$PROJECT_DIR$/views/orderdetail.php" />
         <option value="$PROJECT_DIR$/models/modelLogin.php" />
+        <option value="$PROJECT_DIR$/views/orderdetail.php" />
       </list>
     </option>
   </component>
@@ -233,12 +233,12 @@
       <workItem from="1513801184379" duration="3806000" />
       <workItem from="1513841703756" duration="2273000" />
       <workItem from="1515009821781" duration="19022000" />
-      <workItem from="1515448476646" duration="1627000" />
+      <workItem from="1515448476646" duration="1720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33202000" />
+    <option name="totallyTimeSpent" value="33295000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -747,11 +747,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/orderdetail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="60" lean-forward="true" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+        <state relative-caret-position="240">
+          <caret line="16" column="64" lean-forward="false" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
           <folding>
-            <marker date="1515450114000" expanded="true" signature="2738:2770" ph="..." />
-            <marker date="1515450114000" expanded="true" signature="3082:3095" ph="..." />
+            <marker date="1515450224000" expanded="true" signature="2748:2780" ph="..." />
+            <marker date="1515450224000" expanded="true" signature="3092:3105" ph="..." />
           </folding>
         </state>
       </provider>

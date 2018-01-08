@@ -14,7 +14,7 @@
             <?php
             define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
             include(ABS_PATH . '/models/modelDatabase.php');
-            var_dump(DB::getCustomerData($_COOKIE['username']));
+            echo DB::getCustomerData($_COOKIE['username'])[0]['FULLNAME'];
 
             ?>
             </p>
