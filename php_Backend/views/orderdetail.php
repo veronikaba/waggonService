@@ -74,7 +74,9 @@ include(ABS_PATH . '/models/modelDatabase.php');
 
     <div class="rows grey numberheader">
         <div class="col-3">Auftragsnummer</div>
-        <div class="col-9">2017101201</div>
+        <div class="col-9"><?=
+        ?>
+</div>
     </div>
 
     <div class="rows">
