@@ -27,7 +27,7 @@
 
             Ansprechpartner:
             <?php define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
-            include(ABS_PATH . '/models/modelDatabase.php');
+            
             echo DB::getContactPerson($_GET['order'])[0]['DISPLAYNAME'];
             ?></div>
     </div>
