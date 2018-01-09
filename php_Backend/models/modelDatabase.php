@@ -10,7 +10,7 @@ public static function connect(){
 }
 
 public function getDataAfterlogin(){ //Abfrage der Daten für die Tabelle bei  afterlogin.php
-    $pdo = connect();
+    $pdo = DB::connect();
 
     $statement= $pdo->prepare("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, 
 USER.DISPLAYNAME FROM maintenancejob  JOIN VEHICLE ON maintenancejob.vehicle_id = VEHICLE.ID JOIN maintenancejobstate on 
