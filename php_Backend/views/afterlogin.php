@@ -71,7 +71,7 @@ if(mysqli_connect_errno($db)) {
                     $jobnumber = $row["jobnumber"];
                     $order = $row["order_id"];
                     echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php?id=$jobnumber&order=$order'><td>" . $row["jobnumber"] . "</td><td>" . $row["VEHICLENUMBER"] . "</td><td>" . $row["DESCRIPTION"]
-                        . "</td><td>" .status($wert). "</span></td><td>" . $row["firstname"] . "</td></tr>");
+                        . "</td><td>" .status($wert). "</span></td><td>" . $row["firstname"]["lastname"] . "</td></tr>");
 
 
 
