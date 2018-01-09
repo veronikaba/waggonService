@@ -92,9 +92,9 @@
     <div class="rows">
         <div class="col-3 distanceLeft">Standort</div>
         <div class="col-9"><?php define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
-
             echo DB::getLocation($_GET['order'])[0]['denotation'];
-            ?></div></div>
+            ?>
+        </div>
     </div>
 
     <div class="divider"></div>
