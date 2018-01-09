@@ -18,7 +18,7 @@ class Model {
           return 'login';
         }
         else {
-          echo $falsch;
+          echo "<h1>$falsch</h1>";
         }
 
     }
