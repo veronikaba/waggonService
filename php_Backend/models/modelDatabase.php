@@ -20,11 +20,12 @@ WHERE order_id IN (SELECT id FROM order WHERE company_id = ?");
 }
 
 public function getOrderId(){
+    $pdo = DB::connect();
     // Funktion, um Wert der Auftragsnummer zu übergeben, damit diese auf orderdetail.php als Referenz genutzt werden kann
 }
 
 public function getContactperson($order_id){ //Ansprechpartner
-    $pdo = connect();
+    $pdo = DB::connect();
 
     $statement = $pdo->prepare("SELECT USER.DISPLAYNAME FROM `order` join `USER`on order.creator_id = USER.USERNAME WHERE order.id = $order_id");
 
@@ -34,14 +35,14 @@ public function getContactperson($order_id){ //Ansprechpartner
 }
 
 public function getHistory(){ // Verlauf
-    $pdo = connect();
+    $pdo = DB::connect();
 
     $statement = $pdo->prepare("SELECT orderstate_id FROM `order` WHERE id = ?");
 
 }
 
 public function getJobnumber(){ //Auftragsnummer mit Wagennummer und Status ?
-    $pdo = connect();
+    $pdo = DB::connect();
 
     $statement = $pdo->prepare("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION 
 FROM `maintenancejob` JOIN `VEHICLE` ON maintenancejob.vehicle_id = VEHICLE.ID JOIN `maintenancejobstate`on 
