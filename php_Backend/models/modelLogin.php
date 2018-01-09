@@ -10,6 +10,7 @@ class Model {
 
         $abfrage = DB::getPassword(trim($_POST['username']));
         setcookie("username",trim($_POST['username']),0);
+        $falsch = "ungültige Eingabe";
 
         $pw = trim($_REQUEST['password']);
         if($pw==$abfrage[0]['PASSWORT']){
@@ -17,7 +18,7 @@ class Model {
           return 'login';
         }
         else {
-          echo "ungültige Eingabe";
+          echo $falsch;
         }
 
     }

@@ -11,6 +11,7 @@ class Controller {
         $result = $this->models->getlogin();
         // ruft getlogin() Funktion der Model-Klasse auf und speichert den Return-Wert
         if($result == 'login') {
+
             include(ABS_PATH . '/views/afterlogin.php');
         }
         else {
