@@ -73,15 +73,7 @@ if(mysqli_connect_errno($db)) {
                     echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php?id=$jobnumber&order=$order'><td>" . $row["jobnumber"] . "</td><td>" . $row["VEHICLENUMBER"] . "</td><td>" . $row["DESCRIPTION"]
                         . "</td><td>" .status($wert). "</span></td><td>" . $row["firstname"] . " " . $row["lastname"] . "</td></tr>");
 
-
-
-
-
-
-
                 }
-
-
 
             } else {
                 echo "0 results";

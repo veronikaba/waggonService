@@ -28,7 +28,6 @@ public function getContactperson($order_id){ //Ansprechpartner
     $pdo = DB::connect();
 
     $statement = $pdo->prepare("SELECT USER.DISPLAYNAME FROM `order` join `USER`on order.creator_id = USER.USERNAME WHERE order.id = $order_id");
-
     $statement->execute(array($order_id));
     return $statement->fetchAll();
 
@@ -51,11 +50,11 @@ maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME WHERE mainte
 }
 
 
-public function getLocation($order){ //Standort
+public function getLocation($order_id){ //Standort
     $pdo = DB::connect();
 
-    $statement = $pdo->prepare("SELECT location.denotation FROM `order`JOIN `location` ON order.location_id = location.id WHERE order.id = ?");
-    $statement->execute(array($order));
+    $statement = $pdo->prepare("SELECT location.denotation FROM `order`JOIN `location` ON order.location_id = location.id WHERE order.id = $order_id");
+    $statement->execute(array($order_id));
     return $statement->fetchAll();
 
 }
