@@ -60,7 +60,7 @@ if(mysqli_connect_errno($db)) {
             <tbody id="myTable">
 
             <?php
-            $result = $db->query("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, USER.DISPLAYNAME
+            $result = $db->query("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, USER.DISPLAYNAME, maintenancejob.order_id
          FROM `maintenancejob`  JOIN `VEHICLE` ON maintenancejob.vehicle_id = VEHICLE.ID JOIN `maintenancejobstate`on maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN `USER` ON maintenancejob.clerk_id = USER.USERNAME
          WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)");
             if ($result->num_rows > 0 ) {
