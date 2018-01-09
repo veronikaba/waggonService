@@ -25,8 +25,11 @@
        <div class="col-3">Auftrag / Projekt</div>
         <div class="col-9 ansprechpartner">
 
-
-            Ansprechpartner: Tim Müller</div>
+            Ansprechpartner:
+            <?php define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
+            include(ABS_PATH . '/models/modelDatabase.php');
+            echo DB::getContactPerson($_GET['order'])[0]['DISPLAYNAME'];
+            ?></div>
     </div>
 
     <div class="rows">

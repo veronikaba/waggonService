@@ -23,22 +23,13 @@ public function getOrderId(){
     // Funktion, um Wert der Auftragsnummer zu übergeben, damit diese auf orderdetail.php als Referenz genutzt werden kann
 }
 
-public function getContactperson(){ //Ansprechpartner
+public function getContactperson($order_id){ //Ansprechpartner
     $pdo = connect();
 
+    $statement = $pdo->prepare("SELECT USER.DISPLAYNAME FROM `order` join `USER`on order.creator_id = USER.USERNAME WHERE order.id = $order_id");
 
-    $statement = $pdo->prepare("SELECT USER.DISPLAYNAME FROM `order` join `USER`on order.creator_id = USER.USERNAME WHERE order.id = $login");
-
-    while ($row = $statement->fetch())
-    {
-        $contact = $row['Kundenname'];
-
-    }
-
-    /* ??? $res = $con->query("SELECT USER.DISPLAYNAME FROM `order` join `USER`on order.creator_id = USER.USERNAME WHERE order.id = ?");
-    foreach($res as $dsatz)
-        echo $dsatz["name"] . ", " . $dsatz["gehalt"] . "<br />";
-    echo "<br />"; */
+    $statement->execute(array($order_id));
+    return $statement->fetchAll();
 
 }
 
