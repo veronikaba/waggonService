@@ -18,7 +18,11 @@ class Model {
           return 'login';
         }
         else {
-          echo "<h1>$falsch</h1>";
+            echo '<script type="text/javascript"> 
+
+            alert("ungültige Eingabe"); 
+            
+            </script>';
         }
 
     }
