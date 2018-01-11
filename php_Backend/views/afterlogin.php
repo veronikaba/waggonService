@@ -61,23 +61,12 @@ if(mysqli_connect_errno($db)) {
             <tbody id="myTable">
 
             <?php
-            $result = $db->query("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, USER.DISPLAYNAME, maintenancejob.order_id, contact.firstname, contact.lastname
-         FROM `maintenancejob`  JOIN `VEHICLE` ON maintenancejob.vehicle_id = VEHICLE.ID JOIN `maintenancejobstate`on maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN `USER` ON maintenancejob.clerk_id = USER.USERNAME 
-         JOIN `order`on maintenancejob.order_id=order.id JOIN `contact`on order.contact_id= contact.id
-         WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)");
-            if ($result->num_rows > 0 ) {
-                while($row = $result->fetch_assoc()) {
-                    $wert = utf8_encode($row["DESCRIPTION"]);
-                    $jobnumber = $row["jobnumber"];
-                    $order = $row["order_id"];
-                    echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php?id=$jobnumber&order=$order'><td>" . $row["jobnumber"] . "</td><td>" . $row["VEHICLENUMBER"] . "</td><td>" . $row["DESCRIPTION"]
-                        . "</td><td>" .status($wert). "</span></td><td>" . $row["firstname"] . " " . $row["lastname"] . "</td></tr>");
+            define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
+            include(ABS_PATH . '/models/modelDatabase.php');
 
-                }
+            DB::getDataAfterlogin($username);
 
-            } else {
-                echo "0 results";
-            }?>
+            ?>
             </tbody>
             <?php
             function status($wert){

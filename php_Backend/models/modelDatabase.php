@@ -9,15 +9,34 @@ public static function connect(){
     return $pdo = new PDO("mysql:host=localhost; dbname=waggonservice", "root", "Te17e4so") ;
 }
 
-public function getDataAfterlogin(){ //Abfrage der Daten für die Tabelle bei  afterlogin.php
+public static function getDataAfterlogin($username)
+{ //Abfrage der Daten für die Tabelle bei  afterlogin.php
     $pdo = DB::connect();
 
-    $statement= $pdo->prepare("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, 
+    $statement = $pdo->prepare("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, 
 USER.DISPLAYNAME FROM maintenancejob  JOIN VEHICLE ON maintenancejob.vehicle_id = VEHICLE.ID JOIN maintenancejobstate on 
 maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN USER ON maintenancejob.clerk_id = USER.USERNAME 
 WHERE order_id IN (SELECT id FROM order WHERE company_id = ?");
 
-}
+    $statement->execute(array($username);
+
+
+    if ($statement->num_rows > 0) {
+        while ($row = $statement->fetch_all()) {
+            $wert = utf8_encode($row["DESCRIPTION"]);
+            $jobnumber = $row["jobnumber"];
+            $order= $row["order_id"];
+            echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php?id=$jobnumber&order=$order'><td>" . $row["jobnumber"] . "</td><td>" . $row["VEHICLENUMBER"] . "</td><td>" . $row["DESCRIPTION"]
+                . "</td><td>" . status($wert) . "</span></td><td>" . $row["firstname"] . " " . $row["lastname"] . "</td></tr>");
+
+
+        }
+    }
+        else {
+        echo "0 results";
+
+        }
+    }
 
 
 public function getContactperson($order_id){ //Ansprechpartner
