@@ -18,7 +18,7 @@ public static function getDataAfterlogin($username)
     $statement = $pdo->prepare("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, 
 USER.DISPLAYNAME FROM maintenancejob  JOIN VEHICLE ON maintenancejob.vehicle_id = VEHICLE.ID JOIN maintenancejobstate on 
 maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN USER ON maintenancejob.clerk_id = USER.USERNAME 
-WHERE order_id IN (SELECT id FROM order WHERE company_id = $username");
+WHERE order_id IN (SELECT id FROM order WHERE company_id = ?");
 
     $statement->execute(array($username));
 
