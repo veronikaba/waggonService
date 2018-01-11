@@ -28,7 +28,7 @@
             Ansprechpartner:
             <?php define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
 
-            echo DB::getContactPerson($_GET['order'])[0]['DISPLAYNAME'];
+            echo utf8_encode(DB::getContactPerson($_GET['order'])[0]['DISPLAYNAME']);
             ?></div>
     </div>
 
@@ -72,46 +72,40 @@
 
     </div>
 
-    <div class="rows grey numberheader">
-        <div class="col-3">Auftragsnummer</div>
-        <div class="col-9">
-            <?php
+    <?php
 
+    define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
 
-            ?>
+    $statement =  DB::getJobnumber($_GET['order']);
+    foreach($statement as $row):
+
+        echo utf8_encode( "<div class='rows grey numberheader'>
+        <div class='col-3'>Auftragsnummer</div>
+        <div class='col-9'>" . $row['jobnumber'] .    " </div></div>
+        <div class='rows'>
+        <div class='col-3 distanceLeft'>Wagennummer</div>
+        <div class='col-9'> " .$row['VEHICLENUMBER'] . " </div>
+    </div>
+    <div class=\"divider\"></div>
+    <div class=\"rows\">
+        <div class=\"col-3 distanceLeft\">Standort</div>
+        <div class=\"col-9\">"
+            . DB::getLocation($_GET['order'])[0]['denotation']. "  
         </div>
     </div>
-
-    <div class="rows">
-        <div class="col-3 distanceLeft">Wagennummer</div>
-        <div class="col-9">37 60 4541 915-6</div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="rows">
-        <div class="col-3 distanceLeft">Standort</div>
-        <div class="col-9"><?php define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
-            echo DB::getLocation($_GET['order'])[0]['denotation'];
-            ?>
+     <div class=\"divider\"></div>
+       <div class=\"rows\">
+        <div class=\"col-3 distanceLeft\">Status</div>
+        <div class=\"col-9\">
+                ".DB::getStatusHistory($row['jobnumber'])."
         </div>
     </div>
+    <div class=\"push\"></div>
+");
 
-    <div class="divider"></div>
+    endforeach;
 
-    <div class="rows">
-        <div class="col-3 distanceLeft">Status</div>
-        <div class="col-9">
-            <details>
-                <summary style=" text-decoration: underline;">05.11.17 Abschluss durch Mobilteam</summary>
-                <p>03.11.17 In Bearbeitung</p>
-                <p>01.11.17 Warten auf Teile</p>
-                <p>30.01.17 Arbeit geplant</p>
-            </details>
-        </div>
-    </div>
-    <div class="push"></div>
-</div>
+    ?>
 <footer>
     <a href="https://waggonservice.com/impressum.html" target="_blank">Impressum</a>
     <a href="https://waggonservice.com/#contact" target="_blank">Kontakt</a>

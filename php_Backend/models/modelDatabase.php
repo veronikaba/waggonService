@@ -19,10 +19,6 @@ WHERE order_id IN (SELECT id FROM order WHERE company_id = ?");
 
 }
 
-public function getOrderId(){
-    $pdo = DB::connect();
-    // Funktion, um Wert der Auftragsnummer zu übergeben, damit diese auf orderdetail.php als Referenz genutzt werden kann
-}
 
 public function getContactperson($order_id){ //Ansprechpartner
     $pdo = DB::connect();
@@ -33,21 +29,34 @@ public function getContactperson($order_id){ //Ansprechpartner
 
 }
 
-public function getHistory(){ // Verlauf
-    $pdo = DB::connect();
+    public function getJobnumber($order_id){ //Auftragsnummer mit Wagennummer und Download
+        $pdo = DB::connect();
 
-    $statement = $pdo->prepare("SELECT orderstate_id FROM `order` WHERE id = ?");
+        $statement = $pdo->prepare("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejob.documenturl 
+        FROM maintenancejob join VEHICLE on maintenancejob.vehicle_id = VEHICLE.ID 
+        WHERE maintenancejob.order_id = $order_id");
+        $statement->execute(array($order_id));
+        return $statement->fetchAll();
+    }
 
-}
+    public function getStatusHistory($jobnumber){
+        $pdo = DB::connect();
 
-public function getJobnumber(){ //Auftragsnummer mit Wagennummer und Status ?
-    $pdo = DB::connect();
+        $statement = $pdo->prepare("SELECT jobstatehistory.updatedate, maintenancejobstate.DESCRIPTION
+        FROM maintenancejob join jobstatehistory on maintenancejob.id = jobstatehistory.maintenancejob_id join maintenancejobstate on jobstatehistory.jobstate_id = maintenancejobstate.KEYNAME
+        WHERE maintenancejob.jobnumber = $jobnumber");
+        $statement->execute(array($jobnumber));
 
-    $statement = $pdo->prepare("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION 
-FROM `maintenancejob` JOIN `VEHICLE` ON maintenancejob.vehicle_id = VEHICLE.ID JOIN `maintenancejobstate`on 
-maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME WHERE maintenancejob.order_id = ?");
+        $history = "<div>";
+        foreach ($statement as $row):
 
-}
+            $history .= "<p>" .$row['updatedate'] . " " .$row['DESCRIPTION']."</p>";
+        endforeach;
+
+        $history .= "</div>";
+
+        return $history;
+    }
 
 
 public function getLocation($order_id){ //Standort
