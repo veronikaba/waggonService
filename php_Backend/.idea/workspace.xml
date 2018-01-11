@@ -46,20 +46,20 @@
       <file leaf-file-name="modelDatabase.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/modelDatabase.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+            <state relative-caret-position="300">
+              <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
               <folding>
-                <marker date="1515678050000" expanded="true" signature="406:800" ph="SELECT maint... maintenancejob" />
-                <marker date="1515678050000" expanded="true" signature="1616:1717" ph="SELECT USER.... order" />
-                <marker date="1515678050000" expanded="true" signature="1970:2178" ph="SELECT maint... maintenancejob" />
-                <marker date="1515678050000" expanded="true" signature="2401:2701" ph="SELECT jobst... maintenancejob" />
-                <marker date="1515678050000" expanded="true" signature="3111:3218" ph="SELECT locat... order" />
-                <marker date="1515678050000" expanded="true" signature="3434:3476" ph="SELECT FULLN... COMPANY" />
-                <marker date="1515678050000" expanded="true" signature="3434:3477" ph="SELECT FULLN... COMPANY" />
-                <marker date="1515678050000" expanded="true" signature="3667:3702" ph="SELECT * FRO... COMPANY" />
-                <marker date="1515678050000" expanded="true" signature="3667:3703" ph="SELECT * FRO... COMPANY" />
-                <marker date="1515678050000" expanded="true" signature="3667:3705" ph="SELECT PASSW... COMPANY" />
-                <marker date="1515678050000" expanded="true" signature="3925:3970" ph="SELECT * FRO... order" />
+                <marker date="1515678137000" expanded="true" signature="406:800" ph="SELECT maint... maintenancejob" />
+                <marker date="1515678137000" expanded="true" signature="1617:1718" ph="SELECT USER.... order" />
+                <marker date="1515678137000" expanded="true" signature="1971:2179" ph="SELECT maint... maintenancejob" />
+                <marker date="1515678137000" expanded="true" signature="2402:2702" ph="SELECT jobst... maintenancejob" />
+                <marker date="1515678137000" expanded="true" signature="3112:3219" ph="SELECT locat... order" />
+                <marker date="1515678137000" expanded="true" signature="3435:3477" ph="SELECT FULLN... COMPANY" />
+                <marker date="1515678137000" expanded="true" signature="3435:3478" ph="SELECT FULLN... COMPANY" />
+                <marker date="1515678137000" expanded="true" signature="3668:3703" ph="SELECT * FRO... COMPANY" />
+                <marker date="1515678137000" expanded="true" signature="3668:3704" ph="SELECT * FRO... COMPANY" />
+                <marker date="1515678137000" expanded="true" signature="3668:3706" ph="SELECT PASSW... COMPANY" />
+                <marker date="1515678137000" expanded="true" signature="3926:3971" ph="SELECT * FRO... order" />
               </folding>
             </state>
           </provider>
@@ -233,12 +233,12 @@
       <workItem from="1515009821781" duration="19022000" />
       <workItem from="1515448476646" duration="5852000" />
       <workItem from="1515504456999" duration="6549000" />
-      <workItem from="1515658404625" duration="2032000" />
+      <workItem from="1515658404625" duration="2094000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46008000" />
+    <option name="totallyTimeSpent" value="46070000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -733,20 +733,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/modelDatabase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        <state relative-caret-position="300">
+          <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
           <folding>
-            <marker date="1515678050000" expanded="true" signature="406:800" ph="SELECT maint... maintenancejob" />
-            <marker date="1515678050000" expanded="true" signature="1616:1717" ph="SELECT USER.... order" />
-            <marker date="1515678050000" expanded="true" signature="1970:2178" ph="SELECT maint... maintenancejob" />
-            <marker date="1515678050000" expanded="true" signature="2401:2701" ph="SELECT jobst... maintenancejob" />
-            <marker date="1515678050000" expanded="true" signature="3111:3218" ph="SELECT locat... order" />
-            <marker date="1515678050000" expanded="true" signature="3434:3476" ph="SELECT FULLN... COMPANY" />
-            <marker date="1515678050000" expanded="true" signature="3434:3477" ph="SELECT FULLN... COMPANY" />
-            <marker date="1515678050000" expanded="true" signature="3667:3702" ph="SELECT * FRO... COMPANY" />
-            <marker date="1515678050000" expanded="true" signature="3667:3703" ph="SELECT * FRO... COMPANY" />
-            <marker date="1515678050000" expanded="true" signature="3667:3705" ph="SELECT PASSW... COMPANY" />
-            <marker date="1515678050000" expanded="true" signature="3925:3970" ph="SELECT * FRO... order" />
+            <marker date="1515678137000" expanded="true" signature="406:800" ph="SELECT maint... maintenancejob" />
+            <marker date="1515678137000" expanded="true" signature="1617:1718" ph="SELECT USER.... order" />
+            <marker date="1515678137000" expanded="true" signature="1971:2179" ph="SELECT maint... maintenancejob" />
+            <marker date="1515678137000" expanded="true" signature="2402:2702" ph="SELECT jobst... maintenancejob" />
+            <marker date="1515678137000" expanded="true" signature="3112:3219" ph="SELECT locat... order" />
+            <marker date="1515678137000" expanded="true" signature="3435:3477" ph="SELECT FULLN... COMPANY" />
+            <marker date="1515678137000" expanded="true" signature="3435:3478" ph="SELECT FULLN... COMPANY" />
+            <marker date="1515678137000" expanded="true" signature="3668:3703" ph="SELECT * FRO... COMPANY" />
+            <marker date="1515678137000" expanded="true" signature="3668:3704" ph="SELECT * FRO... COMPANY" />
+            <marker date="1515678137000" expanded="true" signature="3668:3706" ph="SELECT PASSW... COMPANY" />
+            <marker date="1515678137000" expanded="true" signature="3926:3971" ph="SELECT * FRO... order" />
           </folding>
         </state>
       </provider>

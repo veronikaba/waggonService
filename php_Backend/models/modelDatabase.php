@@ -18,7 +18,7 @@ USER.DISPLAYNAME FROM maintenancejob  JOIN VEHICLE ON maintenancejob.vehicle_id 
 maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN USER ON maintenancejob.clerk_id = USER.USERNAME 
 WHERE order_id IN (SELECT id FROM order WHERE company_id = ?");
 
-    $statement->execute(array($username);
+    $statement->execute(array($username));
 
 
     if ($statement->num_rows > 0) {
