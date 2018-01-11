@@ -24,10 +24,10 @@ if(mysqli_connect_errno($db)) {
     <div class="kunde">
         <p class="textright"><span class="glyphicon glyphicon-user"></span>
             <?php
-            $username =  $_POST['username'];
+            $login =  $_POST['username'];
             $GLOBALS["username"] = $_POST['username'];
 
-            $result=$db->query("SELECT FULLNAME FROM `COMPANY` WHERE ID = $username");
+            $result=$db->query("SELECT FULLNAME FROM `COMPANY` WHERE ID = $login");
             if ($result->num_rows > 0 ) {
                 while($row = $result->fetch_assoc()) {
                     echo $row['FULLNAME'] ;
@@ -63,8 +63,7 @@ if(mysqli_connect_errno($db)) {
             <?php
             define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
 
-            echo DB::getCustomerData($username);
-
+            echo DB::getCustomerData($login);
             ?>
             </tbody>
             <?php
