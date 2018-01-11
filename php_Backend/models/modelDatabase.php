@@ -24,7 +24,7 @@ WHERE order_id IN (SELECT id FROM order WHERE company_id = $username");
 
 
     if ($statement->num_rows > 0) {
-        while ($row = $statement->execute()) {
+        while ($row = $statement->execute(array($username))) {
             $wert = utf8_encode($row["DESCRIPTION"]);
             $jobnumber = $row["jobnumber"];
             $order= $row["order_id"];
