@@ -58,16 +58,16 @@
       <file leaf-file-name="orderdetail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/orderdetail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="71" column="50" lean-forward="false" selection-start-line="71" selection-start-column="50" selection-end-line="71" selection-end-column="50" />
               <folding>
-                <marker date="1515760705000" expanded="true" signature="2744:2861" ph="..." />
-                <marker date="1515760705000" expanded="true" signature="2888:3021" ph="..." />
-                <marker date="1515760705000" expanded="true" signature="3080:3262" ph="..." />
-                <marker date="1515760705000" expanded="true" signature="3167:3251" ph="..." />
-                <marker date="1515760705000" expanded="true" signature="3325:3496" ph="..." />
-                <marker date="1515760705000" expanded="true" signature="3410:3485" ph="..." />
-                <marker date="1515760705000" expanded="true" signature="3565:3578" ph="..." />
+                <marker date="1515761121000" expanded="true" signature="2739:2856" ph="..." />
+                <marker date="1515761121000" expanded="true" signature="2883:3016" ph="..." />
+                <marker date="1515761121000" expanded="true" signature="3075:3257" ph="..." />
+                <marker date="1515761121000" expanded="true" signature="3162:3246" ph="..." />
+                <marker date="1515761121000" expanded="true" signature="3320:3491" ph="..." />
+                <marker date="1515761121000" expanded="true" signature="3405:3480" ph="..." />
+                <marker date="1515761121000" expanded="true" signature="3560:3573" ph="..." />
               </folding>
             </state>
           </provider>
@@ -86,8 +86,8 @@
       <file leaf-file-name="modelDatabase.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/modelDatabase.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="93" lean-forward="false" selection-start-line="7" selection-start-column="93" selection-end-line="7" selection-end-column="93" />
+            <state relative-caret-position="780">
+              <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
               <folding>
                 <marker date="1515760888000" expanded="true" signature="417:1006" ph="SELECT maint... maintenancejob" />
                 <marker date="1515760888000" expanded="true" signature="958:999" ph="SELECT id FR... order" />
@@ -142,8 +142,8 @@
         <option value="$PROJECT_DIR$/models/modelLogin.php" />
         <option value="$PROJECT_DIR$/views/afterlogin.php" />
         <option value="$PROJECT_DIR$/views/orderDetailIcons.php" />
-        <option value="$PROJECT_DIR$/views/orderdetail.php" />
         <option value="$PROJECT_DIR$/models/modelDatabase.php" />
+        <option value="$PROJECT_DIR$/views/orderdetail.php" />
       </list>
     </option>
   </component>
@@ -161,7 +161,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="838" />
     <option name="height" value="1050" />
   </component>
@@ -275,12 +275,12 @@
       <workItem from="1515448476646" duration="5852000" />
       <workItem from="1515504456999" duration="6549000" />
       <workItem from="1515658404625" duration="5225000" />
-      <workItem from="1515760162863" duration="668000" />
+      <workItem from="1515760162863" duration="918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49869000" />
+    <option name="totallyTimeSpent" value="50119000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -292,10 +292,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="838" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1016" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28015074" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.030800821" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09472551" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33776867" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -747,22 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/orderdetail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <marker date="1515760705000" expanded="true" signature="2744:2861" ph="..." />
-            <marker date="1515760705000" expanded="true" signature="2888:3021" ph="..." />
-            <marker date="1515760705000" expanded="true" signature="3080:3262" ph="..." />
-            <marker date="1515760705000" expanded="true" signature="3167:3251" ph="..." />
-            <marker date="1515760705000" expanded="true" signature="3325:3496" ph="..." />
-            <marker date="1515760705000" expanded="true" signature="3410:3485" ph="..." />
-            <marker date="1515760705000" expanded="true" signature="3565:3578" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conf/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -771,10 +755,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/orderdetail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="71" column="50" lean-forward="false" selection-start-line="71" selection-start-column="50" selection-end-line="71" selection-end-column="50" />
+          <folding>
+            <marker date="1515761121000" expanded="true" signature="2739:2856" ph="..." />
+            <marker date="1515761121000" expanded="true" signature="2883:3016" ph="..." />
+            <marker date="1515761121000" expanded="true" signature="3075:3257" ph="..." />
+            <marker date="1515761121000" expanded="true" signature="3162:3246" ph="..." />
+            <marker date="1515761121000" expanded="true" signature="3320:3491" ph="..." />
+            <marker date="1515761121000" expanded="true" signature="3405:3480" ph="..." />
+            <marker date="1515761121000" expanded="true" signature="3560:3573" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/modelDatabase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="93" lean-forward="false" selection-start-line="7" selection-start-column="93" selection-end-line="7" selection-end-column="93" />
+        <state relative-caret-position="780">
+          <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
           <folding>
             <marker date="1515760888000" expanded="true" signature="417:1006" ph="SELECT maint... maintenancejob" />
             <marker date="1515760888000" expanded="true" signature="958:999" ph="SELECT id FR... order" />
