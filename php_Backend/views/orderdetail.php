@@ -34,7 +34,7 @@
 
     <div class="rows">
         <?php
-        include(ABS_PATH . 'views/orderDetailicons.php');
+        include(ABS_PATH . '/views/orderDetailicons.php');
         $status =  DB::getOrderStatus($_GET['order'])[0]['orderstate_id'];
         ?>
         <div class="col-3 col-12-Verlauf">Verlauf Ihres Auftrags</div>

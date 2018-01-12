@@ -55,25 +55,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orderdetail.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="orderdetail.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/orderdetail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state relative-caret-position="248">
+              <caret line="36" column="29" lean-forward="false" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
               <folding>
-                <marker date="1515761438000" expanded="true" signature="2687:2804" ph="..." />
-                <marker date="1515761438000" expanded="true" signature="2831:2964" ph="..." />
-                <marker date="1515761438000" expanded="true" signature="3023:3205" ph="..." />
-                <marker date="1515761438000" expanded="true" signature="3110:3194" ph="..." />
-                <marker date="1515761438000" expanded="true" signature="3268:3439" ph="..." />
-                <marker date="1515761438000" expanded="true" signature="3353:3428" ph="..." />
-                <marker date="1515761438000" expanded="true" signature="3508:3521" ph="..." />
+                <marker date="1515761797000" expanded="true" signature="2688:2805" ph="..." />
+                <marker date="1515761797000" expanded="true" signature="2832:2965" ph="..." />
+                <marker date="1515761797000" expanded="true" signature="3024:3206" ph="..." />
+                <marker date="1515761797000" expanded="true" signature="3111:3195" ph="..." />
+                <marker date="1515761797000" expanded="true" signature="3269:3440" ph="..." />
+                <marker date="1515761797000" expanded="true" signature="3354:3429" ph="..." />
+                <marker date="1515761797000" expanded="true" signature="3509:3522" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orderDetailIcons.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="orderDetailIcons.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/orderDetailIcons.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -142,8 +142,8 @@
         <option value="$PROJECT_DIR$/models/modelLogin.php" />
         <option value="$PROJECT_DIR$/views/afterlogin.php" />
         <option value="$PROJECT_DIR$/models/modelDatabase.php" />
-        <option value="$PROJECT_DIR$/views/orderdetail.php" />
         <option value="$PROJECT_DIR$/views/orderDetailIcons.php" />
+        <option value="$PROJECT_DIR$/views/orderdetail.php" />
       </list>
     </option>
   </component>
@@ -275,12 +275,12 @@
       <workItem from="1515448476646" duration="5852000" />
       <workItem from="1515504456999" duration="6549000" />
       <workItem from="1515658404625" duration="5225000" />
-      <workItem from="1515760162863" duration="1386000" />
+      <workItem from="1515760162863" duration="1534000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50587000" />
+    <option name="totallyTimeSpent" value="50735000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -293,8 +293,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1016" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40862423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40862423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09472551" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33776867" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -764,27 +765,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/orderdetail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding>
-            <marker date="1515761438000" expanded="true" signature="2687:2804" ph="..." />
-            <marker date="1515761438000" expanded="true" signature="2831:2964" ph="..." />
-            <marker date="1515761438000" expanded="true" signature="3023:3205" ph="..." />
-            <marker date="1515761438000" expanded="true" signature="3110:3194" ph="..." />
-            <marker date="1515761438000" expanded="true" signature="3268:3439" ph="..." />
-            <marker date="1515761438000" expanded="true" signature="3353:3428" ph="..." />
-            <marker date="1515761438000" expanded="true" signature="3508:3521" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/orderDetailIcons.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/orderdetail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="36" column="29" lean-forward="false" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+          <folding>
+            <marker date="1515761797000" expanded="true" signature="2688:2805" ph="..." />
+            <marker date="1515761797000" expanded="true" signature="2832:2965" ph="..." />
+            <marker date="1515761797000" expanded="true" signature="3024:3206" ph="..." />
+            <marker date="1515761797000" expanded="true" signature="3111:3195" ph="..." />
+            <marker date="1515761797000" expanded="true" signature="3269:3440" ph="..." />
+            <marker date="1515761797000" expanded="true" signature="3354:3429" ph="..." />
+            <marker date="1515761797000" expanded="true" signature="3509:3522" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
