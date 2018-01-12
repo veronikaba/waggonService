@@ -5,7 +5,7 @@ include ABS_PATH . '/conf/config.php';
 class DB {
 
     public static function connect(){
-        return $pdo = new PDO("mysql:host=localhost; dbname=waggonservice", "root", "") ;
+        return $pdo = new PDO("mysql:host=localhost; dbname=waggonservice", "root", "Te17e4so") ;
     }
 
     public function getDataAfterlogin($login){ //Abfrage der Daten für die Tabelle bei  afterlogin.php
