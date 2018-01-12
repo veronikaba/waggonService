@@ -69,8 +69,6 @@
 
     <?php
 
-    define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
-
     $statement =  DB::getJobnumber($_GET['order']);
     foreach($statement as $row):
 
