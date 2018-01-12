@@ -12,29 +12,15 @@
 
 </head>
 <body>
-<?php
 
-$db = new mysqli('localhost', 'root', 'Te17e4so', 'waggonservice');
-if(mysqli_connect_errno($db)) {
-    echo "Failed to connect to MySQL:" . mysqli_connect_error();
-}
-?>
 <div class="content">
 
     <div class="kunde">
         <p class="textright"><span class="glyphicon glyphicon-user"></span>
             <?php
             $login =  $_POST['username'];
-            $GLOBALS["username"] = $_POST['username'];
-
-            $result=$db->query("SELECT FULLNAME FROM `COMPANY` WHERE ID = $login");
-            if ($result->num_rows > 0 ) {
-                while($row = $result->fetch_assoc()) {
-                    echo $row['FULLNAME'] ;
-                }}
-            else {
-                echo "0 results";
-            }?>
+            echo DB::getCustomerData($login)[0]['FULLNAME'];
+            ?>
         </p>
         <p class="textright"><a href="index.php"><span class="glyphicon glyphicon-log-out"></span>Abmelden</a></p>
     </div>
@@ -61,24 +47,18 @@ if(mysqli_connect_errno($db)) {
             <tbody id="myTable">
 
             <?php
-            $result = $db->query("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, USER.DISPLAYNAME, maintenancejob.order_id, contact.firstname, contact.lastname
-         FROM `maintenancejob`  JOIN `VEHICLE` ON maintenancejob.vehicle_id = VEHICLE.ID JOIN `maintenancejobstate`on maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN `USER` ON maintenancejob.clerk_id = USER.USERNAME 
-         JOIN `order`on maintenancejob.order_id=order.id JOIN `contact`on order.contact_id= contact.id
-         WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)");
-            if ($result->num_rows > 0 ) {
-                while($row = $result->fetch_assoc()) {
-                    $wert = utf8_encode($row["DESCRIPTION"]);
-                    $jobnumber = $row["jobnumber"];
-                    $order = $row["order_id"];
-                    echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php?id=$jobnumber&order=$order'><td>" . $row["jobnumber"] . "</td><td>" . $row["VEHICLENUMBER"] . "</td><td>" . $row["DESCRIPTION"]
-                        . "</td><td>" .status($wert). "</span></td><td>" . $row["firstname"] . " " . $row["lastname"] . "</td></tr>");
+            $statement =  DB::getDataAfterlogin($login);
+            foreach($statement as $row):
+                $wert = utf8_encode($row["DESCRIPTION"]);
+                $jobnumber = $row["jobnumber"];
+                $order = $row["order_id"];
+                echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php?id=$jobnumber&order=$order'><td>" . $row["jobnumber"] . "</td><td>" . $row["VEHICLENUMBER"] . "</td><td>" . $row["DESCRIPTION"]
+                    . "</td><td>" .status($wert). "</span></td><td>" . $row["firstname"] . " " . $row["lastname"] . "</td></tr>");
+            endforeach;
+            ?>
 
-                }
-
-            } else {
-                echo "0 results";
-            }?>
             </tbody>
+
             <?php
             function status($wert){
 

@@ -33,44 +33,39 @@
     </div>
 
     <div class="rows">
+        <?php
+        require_once(ABS_PATH . 'views/orderDetailicons.php');
+        $status =  DB::getOrderStatus($_GET['order'])[0]['orderstate_id'];
+        ?>
         <div class="col-3 col-12-Verlauf">Verlauf Ihres Auftrags</div>
         <div class="col-9 col-12-Verlauf">
 
             <div class="col-20 ">
-
                 <img src="icons/einsblau.png" alt="icon" class="icon">
                 <div class="icondescription">Auftrag eingeangen</div>
-
             </div>
             <div class="col-20">
-
-                <img src="icons/zwei.png" alt="icon" class="icon">
+                <img src="<?php echo myFunctionIcon(2,$status) ?>.png" alt="icon" class="icon">
                 <div class="icondescription">Auftrag bestätigt</div>
-
             </div>
             <div class="col-20">
-
-                <img src="icons/drei.png" alt="icon" class="icon">
+                <img src="<?php echo myFunctionIcon(3,$status) ?>.png" alt="icon" class="icon">
                 <div class="icondescription">in Bearbeitung</div>
-
             </div>
             <div class="col-20">
-
-                <img src="icons/vier.png" alt="icon" class="icon">
+                <img src="<?php echo myFunctionIcon(4,$status) ?>.png" alt="icon" class="icon">
                 <div class="icondescription">Instandhaltung abgeschlossen</div>
-
             </div>
             <div class="col-20">
-
-                <img src="icons/fünf.png" alt="icon" class="icon">
+                <img src="<?php echo myFunctionIcon(5,$status) ?>.png" alt="icon" class="icon">
                 <div class="icondescription">Auftrag abgeschlossen</div>
-
             </div>
 
 
         </div>
 
     </div>
+
 
     <?php
 

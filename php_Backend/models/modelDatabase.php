@@ -4,50 +4,39 @@ include ABS_PATH . '/conf/config.php';
 
 class DB {
 
-
-
-public static function connect(){
-    return $pdo = new PDO("mysql:host=localhost; dbname=waggonservice", "root", "Te17e4so") ;
-}
-
-public static function getDataAfterlogin($username)
-{ //Abfrage der Daten für die Tabelle bei  afterlogin.php
-    $pdo = DB::connect();
-
-    $statement = $pdo->prepare("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, 
-USER.DISPLAYNAME FROM maintenancejob  JOIN VEHICLE ON maintenancejob.vehicle_id = VEHICLE.ID JOIN maintenancejobstate on 
-maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN USER ON maintenancejob.clerk_id = USER.USERNAME 
-WHERE order_id IN (SELECT id FROM order WHERE company_id = $username");
-
-    $statement->execute(array($username));
-
-
-    if ($statement->num_rows > 0) {
-        while ($row = $statement->execute()) {
-            $wert = utf8_encode($row["DESCRIPTION"]);
-            $jobnumber = $row["jobnumber"];
-            $order= $row["order_id"];
-            echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php?id=$jobnumber&order=$order'><td>" . $row["jobnumber"] . "</td><td>" . $row["VEHICLENUMBER"] . "</td><td>" . $row["DESCRIPTION"]
-                . "</td><td>" . status($wert) . "</span></td><td>" . $row["firstname"] . " " . $row["lastname"] . "</td></tr>");
-
-
-        }
-    }
-        else {
-        echo "0 results";
-
-        }
+    public static function connect(){
+        return $pdo = new PDO("mysql:host=localhost; dbname=waggonservice", "root", "") ;
     }
 
+    public function getDataAfterlogin($login){ //Abfrage der Daten für die Tabelle bei  afterlogin.php
+        $pdo = DB::connect();
 
-public function getContactperson($order_id){ //Ansprechpartner
-    $pdo = DB::connect();
+        $statement= $pdo->prepare("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, USER.DISPLAYNAME, maintenancejob.order_id, contact.firstname, contact.lastname
+         FROM `maintenancejob`  JOIN `VEHICLE` ON maintenancejob.vehicle_id = VEHICLE.ID JOIN `maintenancejobstate`on maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN `USER` ON maintenancejob.clerk_id = USER.USERNAME 
+         JOIN `order`on maintenancejob.order_id=order.id JOIN `contact`on order.contact_id= contact.id
+         WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)");
+        $statement->execute(array($login));
+        return $statement->fetchAll();
 
-    $statement = $pdo->prepare("SELECT USER.DISPLAYNAME FROM `order` join `USER`on order.creator_id = USER.USERNAME WHERE order.id = $order_id");
-    $statement->execute(array($order_id));
-    return $statement->fetchAll();
+    }
 
-}
+    public function getContactperson($order_id){ //Ansprechpartner
+        $pdo = DB::connect();
+
+        $statement = $pdo->prepare("SELECT USER.DISPLAYNAME FROM `order` join `USER`on order.creator_id = USER.USERNAME WHERE order.id = $order_id");
+        $statement->execute(array($order_id));
+        return $statement->fetchAll();
+
+    }
+
+    public function getOrderStatus($order_id){ //Order Status für Icons
+        $pdo = DB::connect();
+
+        $statement = $pdo->prepare("SELECT orderstate_id FROM `order` WHERE id=$order_id");
+        $statement->execute(array($order_id));
+        return $statement->fetchAll();
+
+    }
 
     public function getJobnumber($order_id){ //Auftragsnummer mit Wagennummer und Download
         $pdo = DB::connect();
@@ -59,7 +48,17 @@ public function getContactperson($order_id){ //Ansprechpartner
         return $statement->fetchAll();
     }
 
-    public function getStatusHistory($jobnumber){
+
+    public function getLocation($order_id){ //Standort
+        $pdo = DB::connect();
+
+        $statement = $pdo->prepare("SELECT location.denotation FROM `order`JOIN `location` ON order.location_id = location.id WHERE order.id = $order_id");
+        $statement->execute(array($order_id));
+        return $statement->fetchAll();
+
+    }
+
+    public function getStatusHistory($jobnumber){ //Verlauf
         $pdo = DB::connect();
 
         $statement = $pdo->prepare("SELECT jobstatehistory.updatedate, maintenancejobstate.DESCRIPTION
@@ -72,46 +71,27 @@ public function getContactperson($order_id){ //Ansprechpartner
 
             $history .= "<p>" .$row['updatedate'] . " " .$row['DESCRIPTION']."</p>";
         endforeach;
-
         $history .= "</div>";
 
         return $history;
     }
 
+    public static function getCustomerData($login){ //Kundenname
+        $pdo = DB::connect();
+        $statement= $pdo->prepare("SELECT FULLNAME FROM `COMPANY` WHERE ID = $login");
+        $statement->execute(array($login));
+        return $statement->fetchAll();
 
-public function getLocation($order_id){ //Standort
-    $pdo = DB::connect();
+    }
 
-    $statement = $pdo->prepare("SELECT location.denotation FROM `order`JOIN `location` ON order.location_id = location.id WHERE order.id = $order_id");
-    $statement->execute(array($order_id));
-    return $statement->fetchAll();
+    public static function getPassword($username){
+        $pdo = DB::connect();
 
-}
+        $statement=$pdo->prepare("SELECT * FROM `COMPANY` WHERE ID = ?");
+        $statement->execute(array($username));
+        return $statement->fetchAll();
 
-public static function getCustomerData($username){ //Kundenname
-    $pdo = DB::connect();
-    $statement= $pdo->prepare("SELECT FULLNAME FROM `COMPANY` WHERE ID = ?");
-    $statement->execute(array($username));
-    return $statement->fetchAll();
-
-}
-
-public static function getPassword($username){
-    $pdo = DB::connect();
-
-    $statement=$pdo->prepare("SELECT * FROM `COMPANY` WHERE ID = ?");
-    $statement->execute(array($username));
-    return $statement->fetchAll();
-
-}
-
-public static function getOrderDetailNumber($number){ //Jobnummer Detailansicht
-    $pdo = DB::connect();
-    $statement=$pdo->prepare("SELECT * FROM `order` WHERE `ordernumber` = ?");
-    $statement->execute(array($number));
-    return $statement->fetchAll();
-
-}
+    }
 }
 
 
