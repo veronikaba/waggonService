@@ -12,7 +12,7 @@ class Model {
         setcookie("username",trim($_POST['username']),0);
         $falsch = "ungültige Eingabe";
 
-        $pw = trim($_REQUEST['password']);
+        $pw = hash("sha256",trim($_REQUEST['password']));
         if($pw==$abfrage[0]['PASSWORT']){
 
           return 'login';
