@@ -97,7 +97,9 @@
     <div class=\"push\"></div>
 ");
 
-            function status($wert){
+            function status(){
+
+                $wert = DB::getStatusHistory($row['jobnumber']);
 
                 if($wert == 'In Klärung')
                 {
