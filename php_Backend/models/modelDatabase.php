@@ -11,10 +11,10 @@ class DB {
     public function getDataAfterlogin($login){ //Abfrage der Daten für die Tabelle bei  afterlogin.php
         $pdo = DB::connect();
 
-        $statement= $pdo->prepare("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, USER.DISPLAYNAME, maintenancejob.order_id, contact.firstname, contact.lastname
-         FROM `maintenancejob`  JOIN `VEHICLE` ON maintenancejob.vehicle_id = VEHICLE.ID JOIN `maintenancejobstate`on maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN `USER` ON maintenancejob.clerk_id = USER.USERNAME 
+        $statement= $pdo->prepare("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejobstate.DESCRIPTION, USER.DISPLAYNAME, maintenancejob.order_id, contact.firstname, contact.lastname, order.orderdate
+         FROM `maintenancejob`  JOIN `VEHICLE` ON maintenancejob.vehicle_id = VEHICLE.ID JOIN `maintenancejobstate`on maintenancejob.maintenancejobstate_id = maintenancejobstate.KEYNAME JOIN `USER` ON maintenancejob.clerk_id = USER.USERNAME JOIN `order` order2 on maintenancejob.order_id = order2.id 
          JOIN `order`on maintenancejob.order_id=order.id JOIN `contact`on order.contact_id= contact.id
-         WHERE order_id IN (SELECT id FROM `order`WHERE company_id = $login)");
+         WHERE (order_id IN (SELECT id FROM `order`WHERE company_id = 321)) AND order.orderdate >= (NOW() - INTERVAL 90 DAY)");
         $statement->execute(array($login));
         return $statement->fetchAll();
 
