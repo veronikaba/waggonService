@@ -98,13 +98,17 @@
 ");
 
 
-
-if ($row['jobnumber'] == 'abgeschlossen') {
-    echo "Hallo Welt";
-}
-
-
     endforeach;
+
+    function status($wert)
+    {
+
+        $wert = DB::getStatusHistory($wert['jobnumber']);
+
+        if ($wert == 'abgeschlossen') {
+            echo "Hallo Welt";
+        }
+    }
 
     ?>
 <footer>
