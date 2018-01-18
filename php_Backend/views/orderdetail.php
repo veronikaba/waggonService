@@ -17,7 +17,7 @@
             OrderDetail::getKundenName();
             ?>
             </p>
-        <p class="textright"><a href="/index.php"><span class="glyphicon glyphicon-log-out"></span>Abmelden</a></p>
+        <p class="textright distanceTop"><a href="/index.php"><span class="glyphicon glyphicon-log-out"></span>Abmelden</a></p>
 
     </div>
     <img src="02_WSG_logo.png" alt="Logo" class="logo"">
