@@ -100,8 +100,9 @@
 
 
 if ($row['jobnumber'] == 'abgeschlossen') {
-    return '<span style="color:darkorange;" class="glyphicon glyphicon-alert"></span>';
+    echo "Hallo Welt";
 }
+
 
     endforeach;
 
