@@ -74,7 +74,7 @@
     foreach($statement as $row):
 
         echo utf8_encode( "<div class='rows grey numberheader'>
-        <div class='col-3'>Auftragsnummer</div>
+        <div class='col-3'>Auftragsnummer  </div>
         <div class='col-9'>" . $row['jobnumber'] .    " </div></div>
         <div class='rows'>
         <div class='col-3 distanceLeft'>Wagennummer</div>
@@ -97,13 +97,14 @@
     <div class=\"push\"></div>
 ");
 
+        $wert = utf8_encode($row['jobnumber']);
+
+        if ($wert == 'abgeschlossen') {
+           echo "Hallo Welt!";
+        }
 
 
-    $wert = utf8_encode($row['jobnumber']);
 
-  if ($wert == 'abgeschlossen') {
-      echo '<span style="color:green;" class="glyphicon glyphicon glyphicon-ok "></span>';
-  }
     endforeach;
 
     ?>
