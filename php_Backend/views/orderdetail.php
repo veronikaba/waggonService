@@ -17,7 +17,7 @@
             OrderDetail::getKundenName();
             ?>
             </p>
-        <p class="textright distanceTop"><a href="/index.php"><span class="glyphicon glyphicon-log-out"></span>Abmelden</a></p>
+        <p class="textright"><a href="/index.php"><span class="glyphicon glyphicon-log-out"></span>Abmelden</a></p>
 
     </div>
     <img src="02_WSG_logo.png" alt="Logo" class="logo"">
@@ -74,7 +74,7 @@
     foreach($statement as $row):
 
         echo utf8_encode( "<div class='rows grey numberheader'>
-        <div class='col-3'>Auftragsnummer</div>
+        <div class='col-3 '>Auftragsnummer</div>
         <a name='". $row['jobnumber']."'></a> 
         <div class='col-3'>" . $row['jobnumber']  ."  </div>
         <div class='col-1 col-m-3 pull-right'>". status($row['maintenancejobstate_id']). " </div>
@@ -103,6 +103,16 @@
 
     endforeach;
 
+    ?>
+
+    <?php
+    function status($wert){
+
+        if($wert == 'COMPLETED')
+        {
+            return '<span style="color:greenyellow;" class="glyphicon glyphicon glyphicon-ok "></span>';
+        }
+    }
     ?>
 <footer>
     <a href="https://waggonservice.com/impressum.html" target="_blank">Impressum</a>

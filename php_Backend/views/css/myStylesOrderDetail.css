@@ -115,6 +115,10 @@ a:hover{}
 
     .col-9{  width: 75%;}
 
+    .col-7{
+        width: 57%;
+    }
+
     .distanceLeft{ padding-left: 12%;}
 
     .col-1{
