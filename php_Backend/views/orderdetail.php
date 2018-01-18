@@ -97,9 +97,11 @@
     <div class=\"push\"></div>
 ");
 
-            function status(){
+        $wert = utf8_encode($row['jobnumber']);
 
-                $wert = DB::getStatusHistory($row['jobnumber']);
+            function status($wert){
+
+
 
                 if($wert == 'In Klärung')
                 {
