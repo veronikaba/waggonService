@@ -97,23 +97,13 @@
     <div class=\"push\"></div>
 ");
 
-        $wert = utf8_encode($row['jobnumber']);
-
-            function status($wert){
 
 
+    $wert = utf8_encode($row['jobnumber']);
 
-                if($wert == 'In Klärung')
-                {
-                    return '<span style="color:darkorange;" class="glyphicon glyphicon-alert"></span>';
-                }
-
-                else if($wert == 'abgeschlossen'){
-                    return '<span style="color:green;" class="glyphicon glyphicon glyphicon-ok "></span>';
-                }
-            }
-
-
+  if ($wert == 'abgeschlossen') {
+      return '<span style="color:green;" class="glyphicon glyphicon glyphicon-ok "></span>';
+  }
     endforeach;
 
     ?>
