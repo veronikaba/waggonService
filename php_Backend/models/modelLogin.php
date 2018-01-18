@@ -10,7 +10,7 @@ class Model {
 
         $abfrage = DB::getPassword(trim($_POST['username']));
         setcookie("username",trim($_POST['username']),0);
-        
+
 
         $pw = hash("sha256",trim($_REQUEST['password']));
         if($pw==$abfrage[0]['PASSWORT']){
