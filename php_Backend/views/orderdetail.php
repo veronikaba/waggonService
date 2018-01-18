@@ -17,7 +17,7 @@
             OrderDetail::getKundenName();
             ?>
             </p>
-        <p class="textright"><a href="/index.php"><span class="glyphicon glyphicon-log-out"></span>Abmelden</a></p>
+        <p class="textright distanceTop"><a href="/index.php"><span class="glyphicon glyphicon-log-out"></span>Abmelden</a></p>
 
     </div>
     <img src="02_WSG_logo.png" alt="Logo" class="logo"">
@@ -75,8 +75,11 @@
 
         echo utf8_encode( "<div class='rows grey numberheader'>
         <div class='col-3'>Auftragsnummer</div>
-        <a name='". $row['jobnumber']."'></a>   
-        <div class='col-9'>" . $row['jobnumber'] .    " </div></div>
+        <a name='". $row['jobnumber']."'></a> 
+        <div class='col-3'>" . $row['jobnumber']  ."  </div>
+        <div class='col-1 col-m-3 pull-right'>". status($row['maintenancejobstate_id']). " </div>
+        <div class='col-1 col-m-3 pull-right'><a href='".$row['documenturl']."' class='downloadlink'><span class=\"glyphicon glyphicon-download-alt\" style='margin-right:5px;'></span>Download</a></div>
+        </div>
         <div class='rows'>
         <div class='col-3 distanceLeft'>Wagennummer</div>
         <div class='col-9'> " .$row['VEHICLENUMBER'] . " </div>

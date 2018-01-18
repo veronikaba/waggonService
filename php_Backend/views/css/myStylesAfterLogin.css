@@ -33,8 +33,8 @@ footer{
     margin-top: 1.5%;
 }
 
-.glyphicon-user{
-    margin-right:5px;
+.glyphicon-log-out , .glyphicon-user{
+    margin-right:2px;
 }
 
 .textright{
@@ -70,6 +70,7 @@ a {
 a:hover {
     color: black;
 }
+
 .clickable-row:hover{
     background-color: #d1cdca;
 }
@@ -98,33 +99,33 @@ a:hover {
     }
 }
 
-@media only screen and (max-width: 499px){
+@media only screen and (max-width: 499px) {
 
-    .kunde{
-        font-size:x-small;
-    }
-
-    .logo{
-        width:60%;
-        margin-left:1%;
-        margin-bottom:10px;
-    }
-
-    .auftragstext{
-        background-color: #eb5f0a;
-        border-radius:1px;
-        font-size: 18px;
-        width:200px;
-        color:white;
-        text-align:center;
-        margin-bottom:10px;
-    }
-
-    thead , #MyTable{
+    .kunde {
         font-size: x-small;
     }
 
-    footer{
+    .logo {
+        width: 60%;
+        margin-left: 1%;
+        margin-bottom: 10px;
+    }
+
+    .auftragstext {
+        background-color: #eb5f0a;
+        border-radius: 1px;
+        font-size: 18px;
+        width: 200px;
+        color: white;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    thead, #MyTable {
+        font-size: x-small;
+    }
+
+    footer {
         font-size: smaller;
     }
 }
