@@ -97,13 +97,11 @@
     <div class=\"push\"></div>
 ");
 
-        $wert = utf8_encode($row['jobnumber']);
-
-        if ($wert == 'abgeschlossen') {
-           echo "Hallo Welt!";
-        }
 
 
+if ($row['jobnumber'] == 'abgeschlossen') {
+    return '<span style="color:darkorange;" class="glyphicon glyphicon-alert"></span>';
+}
 
     endforeach;
 
