@@ -41,7 +41,7 @@ class DB {
     public function getJobnumber($order_id){ //Auftragsnummer mit Wagennummer und Download
         $pdo = DB::connect();
 
-        $statement = $pdo->prepare("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejob.documenturl 
+        $statement = $pdo->prepare("SELECT maintenancejob.jobnumber, VEHICLE.VEHICLENUMBER, maintenancejob.documenturl, maintenancejob.maintenancejobstate_id
         FROM maintenancejob join VEHICLE on maintenancejob.vehicle_id = VEHICLE.ID 
         WHERE maintenancejob.order_id = $order_id");
         $statement->execute(array($order_id));
