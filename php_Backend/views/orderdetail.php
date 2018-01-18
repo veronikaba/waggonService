@@ -76,6 +76,7 @@
 
         echo utf8_encode( "<div class='rows grey numberheader'>
         <div class='col-3'>Auftragsnummer</div>
+        <a name='". $row['jobnumber']."'></a>   
         <div class='col-9'>" . $row['jobnumber'] .    " </div></div>
         <div class='rows'>
         <div class='col-3 distanceLeft'>Wagennummer</div>
