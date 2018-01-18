@@ -102,7 +102,7 @@
     $wert = utf8_encode($row['jobnumber']);
 
   if ($wert == 'abgeschlossen') {
-      return '<span style="color:green;" class="glyphicon glyphicon glyphicon-ok "></span>';
+      echo '<span style="color:green;" class="glyphicon glyphicon glyphicon-ok "></span>';
   }
     endforeach;
 
