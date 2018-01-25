@@ -23,8 +23,8 @@
     <img src="02_WSG_logo.png" alt="Logo" class="logo"">
 
     <div class="rows orange textheader">
-       <div class="col-3">Auftrag / Projekt</div>
-        <div class="col-9 ansprechpartner">
+       <div class="col-3 col-s-4">Auftrag / Projekt</div>
+        <div class="col-9 col-s-8 ansprechpartner">
 
             Ansprechpartner:
             <?php define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
@@ -43,22 +43,22 @@
 
             <div class="col-20 ">
                 <img src="icons/einsblau.png" alt="icon" class="icon">
-                <div class="icondescription">Auftrag eingeangen</div>
+                <div class="icondescription">Auftrag eingegangen</div>
             </div>
             <div class="col-20">
-                <img src="<?php echo myFunctionIcon(2,$status) ?>.png" alt="icon" class="icon">
+                <img src="<?php echo OrderDetail::myFunctionIcon(2,$status) ?>.png" alt="icon" class="icon">
                 <div class="icondescription">Auftrag bestätigt</div>
             </div>
             <div class="col-20">
-                <img src="<?php echo myFunctionIcon(3,$status) ?>.png" alt="icon" class="icon">
+                <img src="<?php echo OrderDetail::myFunctionIcon(3,$status) ?>.png" alt="icon" class="icon">
                 <div class="icondescription">in Bearbeitung</div>
             </div>
             <div class="col-20">
-                <img src="<?php echo myFunctionIcon(4,$status) ?>.png" alt="icon" class="icon">
+                <img src="<?php echo OrderDetail::myFunctionIcon(4,$status) ?>.png" alt="icon" class="icon">
                 <div class="icondescription">Instandhaltung abgeschlossen</div>
             </div>
             <div class="col-20">
-                <img src="<?php echo myFunctionIcon(5,$status) ?>.png" alt="icon" class="icon">
+                <img src="<?php echo OrderDetail::myFunctionIcon(5,$status) ?>.png" alt="icon" class="icon">
                 <div class="icondescription">Auftrag abgeschlossen</div>
             </div>
 
@@ -74,26 +74,26 @@
     foreach($statement as $row):
 
         echo utf8_encode( "<div class='rows grey numberheader'>
-        <div class='col-3 '>Auftragsnummer</div>
+        <div class='col-3 col-s-4 '>Auftragsnummer</div>
         <a name='". $row['jobnumber']."'></a> 
-        <div class='col-3'>" . $row['jobnumber']  ."  </div>
-        <div class='col-1 col-m-3 pull-right'>". status($row['maintenancejobstate_id']). " </div>
-        <div class='col-1 col-m-3 pull-right'><a href='".$row['documenturl']."' class='downloadlink'><span class=\"glyphicon glyphicon-download-alt\" style='margin-right:5px;'></span>Download</a></div>
+        <div class='col-4 col-s-3-'>" . $row['jobnumber']  ."  </div>
+        <div class='col-4 col-s-4'>". OrderDetail::status($row['maintenancejobstate_id']). " </div>
+        <div class='col-1'><a href='".$row['documenturl']."' class='downloadlink'><span class=\"glyphicon glyphicon-download-alt\" style='margin-right:5px;'></span>Download</a></div>
         </div>
         <div class='rows'>
-        <div class='col-3 distanceLeft'>Wagennummer</div>
+        <div class='col-3 col-s-4 distanceLeft'>Wagennummer</div>
         <div class='col-9'> " .$row['VEHICLENUMBER'] . " </div>
     </div>
     <div class=\"divider\"></div>
     <div class=\"rows\">
-        <div class=\"col-3 distanceLeft\">Standort</div>
+        <div class=\"col-3 col-s-4 distanceLeft\">Standort</div>
         <div class=\"col-9\">"
             . DB::getLocation($_GET['order'])[0]['denotation']. "  
         </div>
     </div>
      <div class=\"divider\"></div>
        <div class=\"rows\">
-        <div class=\"col-3 distanceLeft\">Status</div>
+        <div class=\"col-3 col-s-4 distanceLeft\">Status</div>
         <div class=\"col-9\">
                 ".DB::getStatusHistory($row['jobnumber'])."
         </div>
@@ -105,15 +105,6 @@
 
     ?>
 
-    <?php
-    function status($wert){
-
-        if($wert == 'COMPLETED')
-        {
-            return '<span style="color:greenyellow;" class="glyphicon glyphicon glyphicon-ok "></span>';
-        }
-    }
-    ?>
 <footer>
     <a href="https://waggonservice.com/impressum.html" target="_blank">Impressum</a>
     <a href="https://waggonservice.com/#contact" target="_blank">Kontakt</a>

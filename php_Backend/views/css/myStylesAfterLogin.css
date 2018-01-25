@@ -75,7 +75,7 @@ a:hover {
     background-color: #d1cdca;
 }
 
-@media only screen and (min-width: 500px){
+@media only screen and (min-width: 700px){
 
     .logo{
         width:470px;
@@ -99,7 +99,7 @@ a:hover {
     }
 }
 
-@media only screen and (max-width: 499px){
+@media only screen and (max-width: 699px){
 
     .kunde{
         font-size:x-small;
