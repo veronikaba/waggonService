@@ -47,8 +47,6 @@
             <tbody id="myTable">
 
             <?php
-            define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
-            include(ABS_PATH . '/models/modelAfterLogin.php');
 
             $statement =  DB::getDataAfterlogin($login);
             foreach($statement as $row):
@@ -56,7 +54,7 @@
                 $jobnumber = $row["jobnumber"];
                 $order = $row["order_id"];
                 echo utf8_encode("<tr class='clickable-row' data-href='views/orderdetail.php?id=$jobnumber&order=$order#$jobnumber'><td>" . $row["jobnumber"] . "</td><td>" . $row["VEHICLENUMBER"] . "</td><td>" . $row["DESCRIPTION"]
-                    . "</td><td>" .Afterlogin::status($wert). "</span></td><td>" . $row["firstname"] . " " . $row["lastname"] . "</td></tr>");
+                    . "</td><td>" .status($wert). "</span></td><td>" . $row["firstname"] . " " . $row["lastname"] . "</td></tr>");
             endforeach;
             ?>
 
@@ -65,6 +63,20 @@
 
         </table>
     </div>
+
+    <?php
+   function status($wert){
+
+        if($wert == 'In Klärung')
+        {
+            return '<span style="color:darkorange;" class="glyphicon glyphicon-alert"></span>';
+        }
+
+        else if($wert == 'abgeschlossen'){
+            return '<span style="color:green;" class="glyphicon glyphicon glyphicon-ok "></span>';
+        }
+    }
+    ?>
     <div class="pushFooter"></div>
 </div>
 
