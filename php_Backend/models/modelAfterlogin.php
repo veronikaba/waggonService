@@ -1,5 +1,5 @@
 <?php
-
+define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
 
 class Afterlogin
 {
