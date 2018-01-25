@@ -47,6 +47,8 @@
             <tbody id="myTable">
 
             <?php
+            define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
+            include(ABS_PATH . '/models/modelAfterLogin.php');
 
             $statement =  DB::getDataAfterlogin($login);
             foreach($statement as $row):
