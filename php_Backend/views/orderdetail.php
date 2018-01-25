@@ -77,8 +77,8 @@
         <div class='col-3 col-s-4 '>Auftragsnummer</div>
         <a name='". $row['jobnumber']."'></a> 
         <div class='col-4 col-s-3-'>" . $row['jobnumber']  ."  </div>
-        <div class='col-4 col-s-4'>". OrderDetail::status($row['maintenancejobstate_id']). " </div>
-        <div class='col-1'><a href='".$row['documenturl']."' class='downloadlink'><span class=\"glyphicon glyphicon-download-alt\" style='margin-right:5px;'></span>Download</a></div>
+        <div class='col-4 col-s-4'><a href='".$row['documenturl']."' class='downloadlink'><span class=\"glyphicon glyphicon-download-alt\" style='margin-right:5px;'></span>Download</a></div>
+        <div class='col-1'>". OrderDetail::status($row['maintenancejobstate_id']). " </div>
         </div>
         <div class='rows'>
         <div class='col-3 col-s-4 distanceLeft'>Wagennummer</div>
